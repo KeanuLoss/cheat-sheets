@@ -1,0 +1,31 @@
+
+body {
+    background-color: #333;
+    color:antiquewhite;
+    text-align: center;
+    list-style-position: inside,
+}
+
+table, tr, th, td, caption {
+    border: 1px solid #eee;
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+
+.references {
+    font-size: 150% ;
+    
+}
+
+a:link{
+    color:blanchedalmond
+}
+
+a:visited {
+    color:aquamarine
+}
+
+a:active {
+    color:antiquewhite
+}

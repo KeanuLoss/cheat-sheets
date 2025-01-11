@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Computer Science Fundamentals</h1>
+
+        <div class="references">
+        <a href="python_cheat_sheet.html">Python cheat sheet</a>
+        <br><a href="oLLama_cheat_sheet.html">oLLama cheat sheet</a>
+        <br><a href="HTML_cheat_sheet.html">HTML cheat sheet</a>
+        <br><a href="IU_PYTHON.html">IU introduction to Python</a>
+        <br><a href="IU_OOP_PYTHON.html">IU Object Oriented Programming</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <article id="">
+            <h2>Bits</h2>
+            <p>
+                Instead of the decimal system (0 - 9) computers use the binary system ( 0 & 1)
+                <br>binary system : first position = 1 position , second = 2 pos. , third = 4pos, fourth = 8pos (always x2)
+                <br>To get the number you simply add the positions to get to total
+                <br><br>deicmal : first pos = 1pos,  second pos = 10pos , third = 100pos ( always x10)
+                <br><br>1 bit = 1 number // 1 wire = 1 bit
+            </p>
+            <h2>Text in binary</h2>
+            <p>
+                 Letters equal numbers, which can be displayed as bits again
+            </p>
+            <h2>Images in binary</h2>
+            <p>
+                Images are made of pixels which are made out of RGB values each ranging from 0 to 255.
+            </p>
+            <h2>Sounds in binary</h2>
+            <p>
+                Vibrations can be represented as a waveform, each point of this waveform can be represented by a number, which can be represented as bits
+                <br>the higher the number of bits the higher the quality of the sound 
+            </p>
+            <h2>Physical storage</h2>
+            <p>
+                Computers typically store bits using electromechanical transistors
+            </p>
+
+            <h2>Bytes</h2>
+            <p>
+                A byte consists of 8 bits.
+                <br>Computers always " read " bits in pieces of a byte.
+                <br><br>The byte is the smalles addressable unit of memory -> a computer with byte adressable memory can not store an individual piece of data that is smaller than a byte.
+
+            </p>
+
+            <h2>Binary Numbers</h2>
+            <p>
+                odd numbers always have a 1 position -> makes it easy to spot an odd number.
+                <br>By knowing the highest numbere of bits you can tell the highest possible decimal number -> 2^n - 1
+            </p>
+
+            <h2>Number limits, overflow and roundoff</h2>
+            <p>
+                When computer programs store numbers in variables, the computer needs to find a way to represent that number in computer memory. Computers use different strategies based on whether a number is an integer or not. Due to limitations in computer memory, programs sometimes encounter issues with roundoff, overflow, or precision of numeric variables
+                <br><br>Integers are numbers that can be written without a fractional component.
+                <br><br>Integers are represented with bits, the last number (from right to left) tells whether its a positive number ( 0 ) or negative number ( 1 )
+            </p>
+
+            <h2>Storing text in binary</h2>
+            <p>Text can be stored in binary with encodings ( 01 = A, 10 = B , etc.)
+                <br>Different encodings can give different letters or symbols to the same binary
+                <br>The computer stores the binary and when this binary is displayed the encoder is used to display the desire letter or symbol.
+            </p>
+
+            <h2>ASCII encoding</h2>
+            <p>
+                Only included letters from the english alphabet and a limited set of symbols + it only uses 7 bits to represent each character
+            </p>
+            
+            <h2>Unicode</h2>
+            <p>
+                A character set which assigns each a "code point"(hexadecimal number) and a name to each character.
+                <br>Its a character set, not an encoding.
+            </p>
+
+            <h2>UTF-8</h2>
+            <p>
+                UTF-8 describes every character from Unicode using 1,2,3 or 4 bytes.
+            </p>
+
+            <h2>Converting analog data into binary</h2>
+            <p>
+                Analog data is infinitely detailed, computers can only store digital data, finite data in a binary representation.
+                <br><br>1. Sampling : taking a sample at regular time intervals in order to reduce the continious time domain into a series of discrete intervals.
+                <br><br>The smaller the sampling interval the higher the number of sample points.
+                <br><br><strong>2. sampling rate</strong> : number of samples in a second
+                <br><br>A sufficient sampling rate is anything larger than twice the highest frequency in the signal
+                <br><br><strong>3. Quantization</strong> : reduces the continous aplitude domain ( y values ) into discrete levels.
+                <br>The lower the quantization interval the more detailed the y values will get
+                <br><br>the ideal quantization interval depends on use case and physical constraints
+                <br><br>3. <strong>4. Binary Encoding</strong> : If there is a limited set of quantized y values, the computer does not need to store the actual value.
+                <br><br>It can store a smaller value that represents the quantized y value.
+                <br><br>The possible values can be mapped to a binary number 
+                <br><br>In order for the computer to understand that sequence, the digitized version needs a description of how the sequence was sampled and encoded.
+                <br><br>Number of bits per sample = bit depth ( bit depth 1 = 2 values[1 or 2] )
+                <br><br>The lower the quantization interval the higher the bit depth
+                <br><br><strong>5. Reconstruction</strong> : analog signals are often stored in digital sotarges so that they can be reproduced later
+                <br><br>When a device wants to convert a digiitzed signal back into an analog signal, it will attempt to reconstruct the original continous signal.
+                <br>e.g. by interpolating a smooth curve through the quantized points
+                <br><br>By decreasing the sampling interval and lowering the quantization error the reconstructed curve will be closer to the original signal -> so always try to sample data with enough precision in order to be able to reconstruct it in the desired quality without exceeding the data storage capacity.
+                <br><br>
+            </p>
+
+            <h2>Compression</h2>
+            <p>
+                The smaller files are, the more files can be stored on a computer.
+                <br><br>compression algorithms reduce the amount of space needed to represent a files
+            </p>
+                <h2>1. Losless compression algorithms</h2>
+                <p>
+                    reduce the sitze without losing any information -> original can be reconstructed from the compressed file
+                    <br><br>replace repeating sequences with single characters that isn't part of the original text -> by using a table of replacements the original can be reconstructed
+                    <br><br>The more a sequence is repeated the more can the file be compressed
+                    <br><br><strong>Bitmaps</strong> : Mapping pixels to bits ( giving a pixel a 1 or 0 )
+                    <br><br><strong>run-length-encoding (RLE)</strong> : replaces each row with numbers that say how many consecutive pixels are the same color, always starting with the number of white pixels : number of white pixels, colored pixels, white pixels, ... 
+                    <br><br>If a row starts with a colored pixel : 0, number of colored pixels, ...
+                    <br><br><strong>RLE Decompression</strong> : recreating an image from the compressed representation
+                    <br><br><strong>Compression Ratio</strong> : much more space is saved when the size increases and the runs of a color are much longer
+                    <br><br>When there are no runs it's almost impossible to compress the file, that's why it's really hard to compress photographic images
+                </p>
+                <h2>2. Lossy compression algorithms</h2>
+                <p> 
+                    reduce the size by discarding less important information -> significantly reduces file size but also affects file quality
+                    <br><br>Huffman coding algorithm : using a shorter binary code to represent a letter can save space when this letter occurs often
+                    <br><br>Huffman decoding : 
+                    <br><br>Byte pair encoding: compression algorithm that replaces the repeated pairs of characters in a string with a character that isn't in the data and creates a table of replacement mappings
+                    <br><br>You can compress images without the human eye noticing a difference
+                    <br>The human eye is better at perceiving differences in brightness than differences in color
+                    <br><br>Chroma subsampling : keeping the brightness but reducing the amount of color
+                    <br><br>The human ear can only hear a certain range of frequencies
+                    <br><br>Perceptual audio coding : discarding the sounds outside of the hearing capacity
+                    <br><br>Sudden sounds can mask other sounds for up to 200ms, computers see those hidden sounds and can discard that information
+                </p>
+                <h2>Compression Quality</h2>
+                <p>
+                    Depending on where you want to display the data you need to keep as much details as possible -> this will dictate what compression algorithm you can use
+                </p>
+        </article>
+        
+        <article>
+            <h2>Copyright</h2>
+            <p>
+                Copyright owners can apply licenses to their creative works so others are allowd to use their work.
+                <br><br>For software, programmers can apply an open source license
+                <br><br>CC-licensed content : host cc-licensed creative work on your website by using the creative commons tool to choose a license and display it visibly near the work
+                <br><br>MIT license : allows distribution, modification, commercial use and the private use of code, as long as the copyright and licencse information are included in the reused code
+                <br><br>
+            </p>
+        </article>
+
+        <article>
+            <h2>The ingredients of the internet</h2>
+            <p>
+                Protocols define how each device must communicate with each other
+                <br><br>IP protocol : uniquely identifies devices using IP adresses and provides a routing strategy to send data to a destination IP adress
+                <br><br>TCP / UDP protocol : transports packets of data from one device to another and checks for errors along the way
+                <br><br>TLS protocol : secure protocol for sending encrypted data so attackers can't view private information
+                <br><br>HTTPS & DNS protocol : used by the browser to a load a webpage
+            </p>
+        </article>
+
+        <article>
+            <h2>Computer networks</h2>
+            <p>
+                A computer network is any group of interconnected computing devices (any device that can run a program) capable of sending or receiving data.
+                <br><br>All devices need to be able to understand the format of the sent data
+                <br><br>A network consisting of more than 2 devices need an adressing scheme, in order to tell the device the incoming data is meant for them or another device 
+                <br><br>There are different <strong>network topologies</strong>, depending on how the devices are interconnected 
+                <br><br><strong>Routing strategies</strong> are necessary in order to define which path is the best.
+            </p>
+
+            <h2>Types of networks</h2>
+            <p>
+                <strong>LAN</strong> : local area network - covers a limited area like a house/school
+                <br><br><strong>WAN</strong> : wide area network - extends over a large geographic area composed of many LANs 
+                <br>oftentimes connected by leasing telecommunication lines
+                <br><br><strong>DATA CENTER NETWORK (DCN)</strong> : data must be exchanged with very little delay
+                <br><br>
+            </p>
+
+            <h2>Networking protocols</h2>
+            <p>
+                Protocols are needed for computing devices to communicate with eachother.
+                <br><br>Internet networking protocols are necessary when they want to communicate over the internet.
+                <br><br>To make sure cables are transmitting information in a way that can be understood by the recipient, they follow the Ethernet standards. 
+                <br><br>Twisted pair calbes send data through a network by transmitting pulses of electricity that represent binary data.
+                <br><br>Fiber-optic cables communciate by sending pulses of light that represent binary data.
+                <br><br>Fiber-optic cables are capable of transmitting much more data per second than copper cables
+                <br><br><strong>Wireless connections</strong> turn binary data into radio waves and transmit them through the air 
+                <br><br>The waves are picked up by a wireless access point which converts them back into binary data. 
+                <br><br>The wireless acess points are connected to the network using physical wiring
+                <br><br>
+            </p>
+        </article>
+
+        <article>
+            <h2>Bit rate</h2>
+            <p>
+                Depending on the number that is to be represented internally multiple wires are needed.
+                <br><br>In order to send a number to another computing device in multiple periods of sending pulses / nothing 
+                <br><br>The computing devices need to agree on the time period in which the signals are sent 
+                <br><br>The signal is either a voltage or a current / intensity of light
+                <br><br>turning binary data into a timebased signal is known as line coding 
+                <br><br>The <strong>bit rate</strong> us the number of bits of data that are sent each second
+                <br><br><strong>bandwith</strong> is the maximum bit rate of a system per seconds 
+                <br><br><strong>latency</strong> is the time between the sending of a data message and the receiving of that message, measured in milliseconds
+                <br><br>round trip latency : the time from sending data to receiving that the data was received
+                <br><br>depending on :  type of connection, distance between the devices & congestion in the network
+                <br><br>
+            </p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>IP Adresses</h2>
+            <p>
+                The <strong>Internet Protocol (IP)</strong> is used in all Internet communication to handle both adressing and routing. 
+                <br><br>With IP adresses devices can be uniquely identified
+                <br><br>without an IP adress devices can't receive messages
+            </p>
+                <h2>IPv4 adresses</h2>
+                <p>
+                    IP adresses are split into 4 numbers, each can range from 0 to 255
+                    <br><br>
+                </p>
+                
+                <h2>IPv6 adresses</h2>
+                <p>
+                    They use hexadecimal numbers (F being the highest digit = 16).
+                    <br><br>each IPv6 adress is represented by 128 bits -> 2^128 possible adresses 
+                    <br><br>
+                </p>
+
+                <h2>Adress hierarchy</h2>
+                <p>
+                    first 2 sequences = network
+                    <br><br>last 2 sequences = home computer on that network
+                    <br><br><strong>Subnets</strong> can break the IP adress into further subnetworks -> improves the efficiency of routing within the network 
+                    <br><br>IP adresses are often split in the middle of octets, this provides the ability to change the number of e.g. departments(2^2) and computers (2^14) // instead of 2^8 departments and 2^8 computers
+                    <br><br>
+                </p>
+
+                <h2>IP packets</h2>
+                <p>
+                    Networking protocols split each message into multiple small packets since there is a limit on how large a message can be
+                    <br><br>the IP protocol describes the structure of the packets
+                    <br><br>The header includes the IP adress of the source and destination + other fields that help to route the packet
+                    <br><br>the data is the actual content
+                </p>
+
+                <hr>
+
+                <h2>Internet routing protocol</h2>
+                <p>
+                    Step1 : sending packets to a router 
+                    <br><br>Step2 : router receives packet
+                    <br><br>Step3 : router forwards packet to a router based on the destination IP adress 
+                    <br>it does it with the help of forwarding tables that asign IP adress prefixes to each different path
+                    <br><br>Step 4: Final router forwards message
+                </p>
+
+                <h2>Redundancy and fault tolerance</h2>
+                <p>
+                    Because of the availability of using multiple paths it's not a problem when a network path is no longer available
+                </p>
+
+                <h2>Problems with packets</h2>
+                <p>
+                    1. multiple messages are sent and the destination needs to identify which packets belong to which message
+                    <br><br>2. packets arrive out of order 
+                    <br><br>3. packets can be corrupted -> the received data doesn't match the ogiginally sent data
+                    <br><br>4. packets can be lost -> may make it impossible to put the message back together in way that makes sense
+                    <br><br>5. packets might be duplicated due to accidental retransmission 
+                </p>
+
+                <hr>
+
+                <h2>Transmission Control Protocol (TCP)</h2>
+                <p>
+                    includes strategies for packet ordering, retransmission and data integrity
+                    <br><br>solves problems such as lost packets, out of order packets, duplicate packets and courrupted packets
+                    <br><br>1. establish connection using a three-way-handshake
+                    <br><br>2. send packets of data and acknowledge it
+                    <br><br>3. close connection using a three-way-handshake
+                    <br><br><strong>Timeouts</strong> : timer starts after sending a packet, if no ACK was received before the timer runs out another packet will be sent 
+                    <br><br><strong>out of order packets</strong> : using the sequence and acknowledgment numbers 
+                    <br><br>when recipient sees a higher sequence number than what they have acknowledged so far -> a packet in between is missing
+                    <br><br>sends a packet with an acknowledgement number set to the expected sequence number
+                    <br><br>
+                </p>
+
+                <hr>
+
+                <h2>User Datagram Protocol (UDP)</h2>
+                <p>
+                    works on top of IP andis an alternative protocol that solves fewer problems but offers faster data transport 
+                    <br><br>detects corrupt data in packets without solving other problems such as lost or out of order packets 
+                    <br><br>often used for time-sensitive applications where speed is more important than accuracy
+                    <br><br>each IP packet is formatted as a UDP segment
+                    <br><br>The first four bytes of the UDP header store the port numbers for the source & destination
+                    <br><br>a networked device can receive messages on different virtual ports
+                    <br><br>the next two bytes of the UDP header store the length (in bytes) of the segment
+                    <br><br>the final two bytes of the UDP header is the checksum, a field that's used by the sender & receiver to check for data corruption
+                    <br><br>
+                </p>
+
+                <hr>
+
+                <h2>Domain Name System (DNS)</h2>
+                <p>
+                    A domain name is a human-friendly adress for a website so we don't have to memorize IP adresses 
+                    <br><br>each domain name is made up of parts :
+                    <br><br>third-level-domain.second-level-domain.top-level-domain 
+                    <br><br>top level : ".com" / ".org" / etc. 
+                    <br><br>second level : company / organization
+                    <br><br>third level : subdomain that directs you to a subset of the website 
+                    <br><br>each domain name is mapped to an IP adress, because computers can't store every IP adress that exists it goes through a multi step process
+                    <br><br>step 1 : check local cache 
+                    <br><br>step 2 : ask the Internet Service Provider cache 
+                    <br><br>step 3 : ask domain name servers
+                    <br><br>step 4 : 
+                </p>
+
+                <hr>
+
+                <h2>Hypertext Transfer Protocol HTTP</h2>
+                <p>
+                    When visiting a website your computer downloads that page from another computer
+                    <br><br>step 1 : direct browser to URL
+                    <br><br>step 2 : browser looks up the IP
+                    <br><br>step 3 : browser sends HHTP request
+                    <br><br>step 4 : host sends back HHTP response
+                    <br><br>step 5 : browser renders the response
+                    <br><br>
+                </p>
+
+
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Scalable Systems</h2>
+            <p>
+                Because new routers can always join the network to help move packets around the internet and there are IP adresses a trillion times of the amount of devices currently connected availabe - the internet is scalable.
+            </p>
+
+            <h2>Possible problems</h2>
+            <p>
+                1. limited bandwith
+                <br><br>2. limited router throughput 
+                <br><br>3. limitation of number of devices that can connect to wireless routers
+            </p>
+
+            <h2>Web Application scalability</h2>
+            <p>
+                Web apps need to be scalable in order to handle a sudden surge in users so they don't experience increased latency or complete outage.
+                <br><br>
+            </p>
+
+            <h2>Internet protocol suite</h2>
+            <p>
+                Layers of the Internet protocols: 
+                <br><br>1. Application layer : HTTP / TLS / DNS
+                <br><br>2. Transport layer : TCP / UDP 
+                <br><br>3. Network layer : IPv4 / v6
+                <br><br>4. Link layer : Ethernet / Wireless LAN
+
+            </p>
+        </article>
+
+        <article>
+            <h2>Programming</h2>
+            <p>
+                A line of code like " println("..."); " is a statement
+                <br><br>programs are made up of statements which are instructions to the computer about something he needs to do
+                <br><br>the command is also called a function,method or procedure
+                <br><br>the function expects a parameter which specifies the input for that function 
+                <br><br>functions are different in each environment and language
+                <br><br>data is stored in variables 
+                <br><br>each variable has a name, a value and a type 
+                <br><br>the computer is storing the values in different places in memory and the variables point at that memory location
+                <br><br>
+            </p>
+
+            <h2>Javascript</h2>
+            <p>variables are created like this : " var variable-name = value; "
+                <br><br>to display a variable you use " println (variable-name) "
+                <br><br>to reassign a value simply use " variable-name = new value "
+                <br><br> the remainder operator is also called modulo-operator (mod) -> it calculates the remainder of a division
+                <br><br>you can use variables inside mathematical expressions, as long as these variables store numbers 
+            </p>
+
+            <h2>Mathematical procedures</h2>
+            <p>
+                Programming languages provide built-in functions and constants
+                <br><br>Math.abs(): calculates the absolute value of a parameter input 
+                <br><br>Here's a list of common built-in math functions : 
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Procedure</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Math.pow(base, exp)</td>
+                            <td>Returns base to the power of exp.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Math.min(x, y, z…)</td>
+                            <td>Returns the minimum of the given numbers.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Math.max(x, y, z…)</td>
+                            <td>Returns the maximum of the given numbers.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Math.round(num)</td>
+                            <td>Returns num rounded to the nearest integer.</td>
+                        </tr> 
+
+                        <tr>
+                            <td>Math.floor(num)</td>
+                            <td>Returns the largest integer less than or equal to num.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Math.ceil(num)</td>
+                            <td>Returns the smallest integer greater than or equal to num.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Math.sin(num)</td>
+                            <td>Returns the sine of num, an angle specified in radians.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Math.cos(num)</td>
+                            <td>Returns the cosine of num, an angle specified in radians.</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Math.tan(num)</td>
+                            <td>Returns the tangent of num, an angle specified in radians.</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <br><br>with <strong>Math.PI</strong>  you can get an approximita value of Pi 
+            </p>
+
+            <h2>Strings in variables</h2>
+            <p>
+                Each letter is a character and a sequence of letters is called a string.
+                <br><br>you store strings by putting the value of that variable in quotes "" and end it with " ; " 
+            </p>
+
+            <h2>String operations</h2>
+            <p>
+                <strong>Combining Strings</strong> with concatenations :
+                <br><br> a string is defined and that string is used within another string 
+                <br><br><strong>NOTICE:</strong> the concatenated string isn't within quotes ! 
+                <br><br><strong>Slicing a string into substrings</strong>: 
+                <br><br>you do so by using the substr() command
+                <br><br>it takes two parameters, the start position and length
+                <br><br>Other string operations : 
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operation</th>
+                            <th>JavScript example</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Finding the position of a character in a string</td>
+                            <td>"hello".indexOf("e")</td>
+                        </tr>
+                        <tr>
+                            <td>Converting a string to all lowercase or uppercase</td>
+                            <td>"HI".toLowerCase(), "hi".toUpperCase()</td>
+                        </tr>
+                        <tr>
+                            <td>Reporting the length of a string</td>
+                            <td>"alphabet".length</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br><br><strong>Chaining multiple operations</strong>:
+                <br><br>You can chain multiple string operations by simply adding them with .operation
+                <br><br>Example : var upperStreet = address.toUpperCase() <strong>.</strong> substr(4, 9);
+            </p>
+
+            <h2>Conditionals with if, else and Booleans</h2>
+            <p>
+                Boolean expressions = True/False 
+                <br><br>conditionals = if/else
+                <br><br>With conditionals programs can respond differently based on the inputs and parameters 
+                <br><br>JavaScript syntax : 
+                <br><br>if (condition) {instruction}
+                <br><br>if (variable < value) { function(""); } 
+                <br><br>the condition is a Boolean expression
+                <br><br>You can store the result of a Boolean expression in a variable 
+                <br>Example : var belowFreezing = temperature < 32;
+                <br><br> with that variable you can subsitute the condition 
+                <br><br>relational operators in JavaScript
+                <br><br>&lt; : less than
+                <br><br>&lt;= : less than or equal
+                <br><br>&gt; : greater than 
+                <br><br>&gt= : greater than or equal 
+                <br><br>= = = : strick equal 
+                <br><br> = = : equal 
+                <br><br> ! = = : strict inequal
+                <br><br> ! = : inequal
+                <br><br>The equality operators first convert them to the same type and then check if they're equal 
+                <br><br>the strict equality operator see's that they're diffrent types and decides they can't be equal 
+                <br><br>With if statements you can execute instructions if the condition is true / false 
+                <br><br>when this isn't the case, you can use " else " statements to execute another instruction
+                <br><br>
+            </p>
+
+            <h2>Nested conditionals</h2>
+            <p>
+                if / else inside an if / else 
+                <br><br>every instruction needs to be in curly brackets ! 
+                <br><br>You can use infinte nest conditionals 
+            </p>
+
+            <h2>chained conditionals</h2>
+            <p>
+                You can use else if conditionals instead of another if inside an else 
+                <br><br>makes the code easier to read and shorter 
+                <br><br>
+            </p>
+
+            <h2>Logical operators</h2>
+            <p>
+                <strong>and, or not</strong> 
+                <br><br><strong>The OR operator ||</strong> can combine two conditions 
+                <br><br>this way you only need 1 instead of 2 conditions with the same instruction 
+                <br><br><strong>the AND operator && </strong> can create a compound expression that is true only when both conditions are true 
+                <br><br><strong>The NOT operator ! </strong> can negate the whole expression when placed in front of it
+                <br>"if it's not ..."
+                <br><br><strong>NOTICE:</strong>make sure to put the NOT operator and the condition in parenthesis so it is applied to the entire compound expression 
+                <br><br><strong>IN GENERAL:</strong> make sure to use parenthesis when you combine logical operators, if you don't it will use them in chronological order 
+            </p>
+
+            <h2>Equivalences</h2>
+            <p>
+                Equivalences with not : not true = false / not false = true 
+                <br><br>two NOT's = no NOT 
+                <br><br>applying NOT to the result of an expression 
+                <br><br>the inequality operator : != (not equal to)
+                <br><br> NOT ( A&lt;B ) = A >= B 
+                <br><br>NOT (A > B ) = A &lt;= B
+                <br><br><strong>Equivalent compound Booleans</strong> NOT A AND NOT B = NOT (A OR B)
+                <br><br>NOT ( A AND B) = NOT A OR NOT B 
+                <br><br> if condition {variable A = True} else {variable A = False} is the same as 
+                <br><br> variable A =  True if condition = True
+                <br><br>if condition {variable A = False} else {variable A = True} is the same as 
+                <br><br> variable A = True if NOT condition = True 
+                <br><br>
+            </p>
+
+            <h2>Procedures</h2>
+            <p>
+                Procedures are also called functions, they allow you to reuse a code multiple times.
+                <br><br>in JavaScript you define a function like this :
+                <br><br>" function function-name() { statements }"
+                <br><br>To call a function in JS you use " function-name ( ) ; "
+                <br><br>Using functions saves time and space of typing the same code while reducing the chance of creating bugs caused by typos 
+                <br><br>When you use a function with parameters you can reference these parameters inside the function. 
+                <br><br>This way you can make small changes without needing to define a whole new function. 
+                <br><br>If you want to use multiple parameters, just seperate them with commas and use unique names
+                <br><br>parameters can be integers, strings or even variables 
+            </p>
+
+                <h2>Return Values</h2>
+                <p>
+                    Return values of a function can be used by the rest of the program
+                    <br><br>it says "remember this value" and use it for a next function 
+                    <br><br>in JS you return the value of a variable from a function by typing " return variable ; "
+                    <br><br>when the computer executes a return statement he exits the function 
+                    <br><br>
+                </p>
+
+                <h2>Numbered repetition of instructions</h2>
+                
+                <h2>for loops</h2> 
+                <p>
+                    repeat instructions
+                    <br><br> in JS : " for (variable x = 0 ; x &lt; y ; x++) { function(...) } "
+                    <br><br>for (initialization ; condition ; increment/decrement )
+                    <br><br><strong>Nested loops</strong>: By using different variable names you can create loops inside loops 
+                    <br><br><strong>NOTICE : the order</strong> the inner loop will loop completely while the outer loop stays the same
+                    <br><br>only when the inner loop is finished the increment of the outer loop will increase
+                    <br><br>
+                </p>
+
+                <h2>while loops</h2>
+                <p>
+                    when you don't know how many times you need to repeat an instruction, but know when you want to stop it
+                    <br><br>in JS : while ( condition ) { instruction }
+                    <br><br>as long as the condition is true the computer keeps repeating the instruction 
+                    <br><br>
+                </p>
+
+                <h2>Storing and updating lists</h2>
+                <p>
+                    Variables can not only store single pieces of data / information (string, integer) but can also store a collection of data.
+                    <br><br>We do this by using <strong>lists</strong>, also known as array or sequence 
+                    <br><br>in JS you initialize a list with " var list-name = [ ] ; "
+                    <br><br>You seperate values within the list with commas 
+                    <br><br>if you want to store strings you need to put each string in quotes " " and seperate them with commas 
+                    <br><br>the position of each value inside a list is called the <strong>index</strong>
+                    <br><br>in JS the first item is at index 0
+                    <br><br>the reference any item of that list just use " var variable-name = list-name [ index ] ; "
+                    <br><br>when you remove an item from a list the order of the whole list changes by 1
+                    <br><br>in JS you add an item to the end of the list with using "append (list-name, value/"string")"
+                    <br><br>in JS you add an item to a specific index with using " insert (list-name, index, value/ " string " ) "
+                </p>
+
+                <h2>Iterating over lists</h2>
+                <p>
+                    When you build a function that goes through every index of a list you need to adjust that function every time you make change the list.
+                    <br><br>By iterating you can apply an instruction to every index of that list.
+                    <br><br>In the following example " variable x " is the counter variable that iterates through the array
+                    <br><br>use " for variable x = 0 ; x &lt; function-name.length ; x + + { instruction }
+                    <br><br>You can compute based on a list of items
+                    <br><br>You can also compute 
+                    <br><br>You can also use conditions inside a loop to compute values based on which elements meets the conditon 
+                    <br><br><strong>creating a new list while iterating through a list :</strong>
+                    <br><br> var listname1 = [...] ;
+                    <br>var listname2 = [] ;
+                    <br>for (var x = 0 ; x < listname1.length ; x + + ) { 
+                        <br> var new value = listname1 [ x ] * | / | + | - integer ;
+                    <br> listname2.push(new value) ; }
+                </p>
+
+                <h2>out of bounds</h2>
+                <p>
+                    When you reference an index that doesn't exist ( list of 7 indexes and you call index 8 ) it causes a runtime error 
+                    <br><br><strong>This prevents the rest of the code from running</strong>
+                    <br><strong>Be careful, in languages with 0-based indices, the highest index is array.length -1 , not array.length</strong>
+                    <br><br><strong>pseudocode:</strong>
+                    <br>FOR EACH value IN list { (instructions) }
+                </p>
+
+                <h2>Algorithms</h2>
+                <p>
+                    A step by step process that describes how to solve a problem in a way that always gives a correct answer.
+                    <br>The best algorithm is the one that solves the problem the fastest.
+                    <br><br><strong>Sequencing : </strong>the order of the steps are crucial to ensuring the correctness of an algorithm 
+                    <br><br><strong>Selection : </strong>Algorithms can use selection to determine a different set of steps to execute based on a Boolean expression 
+                    <br><br><strong>Iteration : </strong>Algorithms often use repetition to execute steps a certain number of times or until a certain condition is met
+                    <br><br>Combining sequencing, selection and iteration creates an algorithm.
+  
+                    <h2>expressing an algorithm</h2>
+                    <p>
+                        You can best express an algorithm with a flow chart. 
+                    </p>
+
+                    <h2>Verifying an algorithm</h2>
+                    <p>
+                        <strong>Empirical analysis : </strong>
+                        <br> needed in order to confirm that the algorithm is working with all different kinds of inputs / lists / dictionaries 
+                        <br><br><strong>Empirical analysis</strong> can only be used to prove that an implemented algorithm is not correct, <strong>by discovering inputs where the output is unexpected.</strong> It cannot prove that an algorithm is correct. 
+                        <br><br><strong>Formal reasoning</strong>:
+                        <br><br><strong>proof by induction: </strong>
+                        <br><br>1. prove that the algorithm eventually terminates and doesn't go on forever
+                        <br><br>2. proving the base case : the algorithm holds for the very first number in the range of possible inputs
+                        <br><br>2. induction step : the algorithm works for any arbitrary number and the number right after it
+                        <br><br>
+                    </p>
+
+                    <h2>Algorithm efficiency</h2>
+                    <p>
+                        efficient = takes least amount of execution time and memory usage while yielding a correct answer 
+                        <br><br>You can measure the efficiency by counting the number of operations necessary.
+                        <br><br><strong>improving efficiency : </strong>
+                        <br><br>binary search : each loop divides the search space in half, so the algorithm has increasingly less numbers to look through
+                        <br><br><strong>Superpolynomial time: </strong> steps required double each time the input size increases 
+                    </p>
+                </p>
+
+                <h2>Using heuristics</h2>
+                <p>
+                    When dealing with problems that run in superpolynomial time you should try to find an approximate solution rather than the perfect solution. 
+                    <br><br><strong>Heurisitcs</strong> are a technique that guide an algorithm to find good choices
+                    <br><br>This way the algorithm doesn't need to exhaustively search every possible solution, so it can find approximate solutions more quickly
+                    <br><br>A <strong>heuristic</strong> is a shortcut that sacrifices accuracy and completeness 
+                    <br><br><strong>The nearest-neighbor heuristic : </strong>always picks the nearest next point on a path
+                </p>
+
+                <h2>Parallel computing</h2>
+                <p>
+                    The standard programming model is sequential computing -> the computer executes each operation of the program in order, one at a time. 
+                    <br><br><strong>Parallel computing </strong> is executing lines of code that are not dependent on each other 
+                    <br><br>The parallel portion of a computing process takes as long as the longest of the parallelized operations takes
+                    <br><br>whenever a core of the processor is ready and waiting it can receive a new task 
+                    <br><br>The speedup is dependent on the number of physical cores, worker threads and the number of data sets
+                </p>
+
+                <h2>Distributed computing</h2>
+                <p>
+                    Using multiple computing devices with multiple cores to process tasks
+                    <br><br>the gains can be measured by calculating the speedup : 
+                    <br>time taken by sequential solution / time taken by parallel solution 
+                    <br><br>it takes time to send and receive the data from device to device -> the time saved by distributing must be greater than the time added by the communication 
+                    <br><br><br><strong>Distribution Architecture : </strong>
+                    <br>In the simplest distributed computing architecture, the managing computer needs to communicate with each worker 
+                    <br><br>More complex architectures require worker nodes to communicate with other worker nodes 
+                    <br>Necesary when using distributed computing to train a deep learning network 
+                    <br><br><strong>computer cluster</strong> : co-located computers on a local network that all work on similiar tasks 
+                    <br><br>this way messages don't have to travel very far and more importantly they don't have to travel over the public internet 
+                    <br><br>
+                </p>
+
+                <h2>storing data sets</h2>
+                <p>
+                    You can store data in text file, when you want to store more related data in a line of a file ( tabular data ) you use the <strong> comma-seperated value (CSV) format</strong> . 
+                    <br><br>drawbacks :
+                    <br> 1. single file - limited by computers hard drive space and by amount of time it takes to open large files
+                    <br><br>2. doesn't come with any built-in tools for querying the data (like sorting by a column / calculating the top value of a column)
+                    <br>you need a spreadsheet application or a specificly written program to iterate through the data 
+                </p>
+
+                <h3>spreadsheets</h3>
+                <p>
+                    A spreadsheet application is a tool for storing, organizing and analyzing data of CSV / TSV / XLS / etc. files. 
+                    <br><br>Applications don't use spreadsheets as their data storage mechanism
+                </p>
+
+                <h3>Databases</h3>
+                <p>
+                    A database is a system that stores data on a computer in a way that can be easily accessed, updated, queried and deleted
+                    <br><br>database management system takes care of all the details like splitting the data into appropriately sized files / remembering what data is stored in each file 
+                    <br><br>to interact with a DB you use query language -> SQL ( Structured Query Language )
+                    <br><br>first you create the DB schema by create database-name ( value1 TYPE, value2 TYPE, ... ) ;
+                    <br><br>then you call functions to add / update / delete data with the desired values 
+                    <br>Example : INSERT INTO database-name VALUES ( "11/11/1991", 9, 73 )
+                    <br><br>a DB typically contains multiple tables, to store different types of collected data 
+                    <br><br>
+                </p>
+
+                <h2>Computing basic statistics</h2>
+                <p>
+                    simplest statistic about a data set are the number of rows -> how comprehensive is the data set
+                    <br>spreadsheet : COUNTA function // SQL : COUNT function 
+                    <br><br>to understand the range of values for a column we can compute statistical metrics like average / median / mode / standard deviation
+                    <br>spreadsheet : AVERAGE function // SQL : AVG function
+                    <br><br>what are the <strong>largest</strong> and <strong>smallest</strong> values for a column
+                    <br>spreadsheet : MIN/MAX function // SQL : MIN / MAX function
+                    <br><br>what is the total value of a column 
+                    <br>spreadsheet : SUM function // SQL : SUM function 
+                    <br><br>filtering data in order to compute statistics on a subset of a data set
+                    <br>spreadsheet : IF functions ( COUNTIF / AVERAGEIF / SUMIF / MINIFS / MAXIFS )
+                    <br>SQL : SELECT COUNT(value) FROM database-name WHERE value="Milkshake";
+                    <br><br>filters can also use conditions or combine conditions on multiple columns 
+                </p>
+
+                <h3>Summarizing by group</h3>
+                <p>
+                    Summary of statistics according to some grouping of the data ( like average calories for each food type )
+                    <br><br>spreadsheet : create a pivot table that groups by a particular column and shows the desired statistic for that column 
+                    <br>SQL : use GROUP BY on the column 
+                    <br><br>
+                </p>
+
+                <h3>patterns in data sets</h3>
+                <p>
+                    A trending quantity is a number that is generally increasing or decreasing 
+                    <br><br>When there are fluctuations you can calculate the trend line that smoothes out the data and makes the overall trend more clear 
+                    <br><br>By analyzing data we can come up with predictions 
+                    <br>usually linear regression is used to find the line that best fits the data to make predictions as accurate as possible 
+                    <br><br>with more data predictions become more accurate, but never 100%
+                    <br><br>another goal of analyzing data is to compute correlations, the statistical relationship between two sets of numbers
+                    <br><br>-1 = strong nevative correlation ; 0 = no correlation ; 1 = strong correlation 
+                    <br><br><strong>correlation does not imply causation!</strong>
+                    <br>Finding a correlation is just a first step in understanding data, it can't tell you the cause, bit it can point you in the direction of possible causes. 
+                </p>
+
+        </article>
+
+        <article id="Machine learning algorithms">
+            <h2>Machine learning algorithms</h2>
+            <p>
+                Machine learning ( ML ) is a type of algorithm that automatically improves itself based on experience.
+                <br><br>The algorithm gains experience by processing more and more data and then modifying itself based on the properties of the data.
+            </p>
+                <h3>Types of machine learning</h3>
+            <p>
+                1. Reinforcement learning : the algorithm performs the actions that will be rewarded the most ( often used by game playing AI or navigational robots )
+                <br><br>2. unsupervised machine learning : algorithm finds patterns in unlabeled data by clustering and identifying similarities 
+                <br><br>3. supervised machine learning : algorithm analyzes labeled data and learns how to map input data to an output label - often used for classification and prediction
+            </p>
+            
+            <h3>Neural networks</h3>
+            <p>
+                Neural networks are an approach to supervised machine learning.
+                <br>It operates similarly to how we think brains work, with unput flowing through many layers of "neurons" eventually leading to an output. 
+                <br><br>Neurons aren't programmed , they are trained by using a massive amount of labeled data 
+                <br><br>The goal of the training phase is to determine weights for the connections between neurons that will correctly classify the training data 
+                <br><br>the weights are ? <strong>!!!!NEED TO LOOK THAT UP!!!!</strong>
+                <br><br>in the beginning all the weights are set to random values -> the initial calssifcations are way off 
+                <br>eventually it comes up with a set of weights that do the best job at classyfying all of the training data 
+                <br><br>a neuron multiplies each connection weight by the value of the input neuron and sums up all of them to come up with a single number 
+                <br><br>this value will be send to the next layer <strong>if it's above a threshold</strong>. 
+            </p>
+
+                <h3>accuracy</h3>
+                <p>
+                    The accuracy is highly dependent on the amount and diversity of the training data ( multiple angles / lighting conditions / different backgrounds / varieties of the object )
+                    
+                </p>
+
+                <h3>bias in predictive algorithms</h3>
+                <p>
+                    If the training data is biased, then the algorithm is biased 
+                    <br><br>When the training data comes from a world full of inequalities, the algorithm may simply be learning how to keep propagating those inequalities. 
+                    <br><br>
+                </p>
+        </article>
+    </main>
+
+    
+    <hr>
+
+    <footer>
+
+    </footer>
+
+
+</body>
+</html>

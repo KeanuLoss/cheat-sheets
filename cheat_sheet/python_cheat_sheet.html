@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Keanus Python Journey</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+
+    <body>
+
+       
+        <header>
+            <h1>Keanus programming cheat sheets</h1>
+
+            <div class="references">
+                <a href="Khan_computer_science_fundamentals.html">Khan computer science cheat sheet</a>
+                <br><a href="oLLama_cheat_sheet.html">oLLama cheat sheet</a>
+                <br><a href="HTML_cheat_sheet.html">HTML cheat sheet</a>
+                <br><a href="IU_PYTHON.html">IU introduction to Python</a>
+                <br><a href="IU_OOP_PYTHON.html">IU Object Oriented Programming</a>
+            </div>
+            
+            <nav>
+
+                <ul>
+                    <li>
+                        <a href="#fundamentals">Fundamentals</a>
+                    </li>
+                    <li>
+                        <a href="#operators">Operators</a>
+                    </li>
+                    <li>
+                        <a href="#assigning-data">Assigning Data</a>
+                    </li>
+                    <li>
+                        <a href="#string-methods">String methods</a>
+                    </li>
+                    <li>
+                        <a href="#data-types">Data Types</a>
+                    </li>
+                    <li>
+                        <a href="#moduls">Moduls</a>
+                    </li>
+                    <li>
+                        <a href="#lists">Lists</a>
+                    </li>
+                  
+                </ul>
+
+            </nav>
+            
+        </header>
+
+        <main>
+
+            <article id="fundamentals">
+                <h2>Fundamentals</h2>
+
+                <p>
+                Before you can use the terminal to run commands, you need to verify your python version by enterin "py -3 --version" in the terminal.
+                <br>After this you need to run python by typing "py" in the terminal. Now you can run commands in the terminal.
+                <br>By typing "quit()" you close the repl and are back to normal prompts again.
+                </p>
+
+                <p>
+                    Expressions are integers like "2+2" or strings like "Hello".
+                    <br>Whereas with statements you assign a value (string or integer) to a variable. Example : myname (which is the variable) = 'Keanu' (which is the string value)
+                    <br><strong>NOTE</strong>: You always need to put the value in '  '  !
+                </p>
+
+                <p>
+                    When you type "print( ' ' )" you create a blank line in the terminal.
+                </p>
+
+                <p>
+                    You can comment by using #. If you want to comment a selected section you use "ctrl + K" and then "ctrl + C" <strong>OR</strong> "Shift + Alt + A".
+                </p>
+
+                <p>
+                    You can use emojis by pressing "windows + ."
+                </p>
+
+                <p>
+                    When you use integers or strings you need to use " ", when using variables you need to use ' '.
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="operators">
+                <h2>Operators</h2>
+
+                <p>
+                    = assigns a value to a variable. <strong>You have to make sure that the value is within brackets ''</strong> !
+                </p>
+
+                <p>
+                    using // rounds down , using round(x / y) rounds up
+                    <br>If you want to get rid of decimals you can use round(variable)
+                </p>
+
+                <p>
+                    you create exponents with using **
+                </p>
+
+                <p>
+                    you add by using "+="" 
+                    <br> subtract by using "-="
+                    <br>multiply by using "*="
+                    <br>divide by using "/="
+                    <br><strong>Note</strong>: you can also add spaces with " number of spaces needed ".
+                </p>
+
+                <p>
+                    "==" checks if its equal
+                    <br>"!=" checks if its not equal
+                    <br>You can check with the symbol for "greater than" / "less than" or equal  if its greater / less or equal.
+                </p>
+
+                <p>
+                    When you use if-else statements you need to end if & else with ":" to create an indent for the print.
+                    <br>Without the indent you get a syntax error.
+                    <br>You can also use a ternary operator and write everything in one line.
+                    <br>Example : print('...') if "variable" > value else print('...')
+                </p>
+
+            </article>
+            
+            <hr>
+
+            <article id="functions">
+                <h2>Functions</h2>
+                <p>
+                    You can assign functions to variables.
+                    <br><br>You can also define functions within functions. When you call the parent-function you also call the "child"-functions 
+                    <br><br><strong>BUT </strong> you can't call the "child"-functions individually. 
+                    <br><br>You don't need to execute the "child"-functions, you can also return their function body in order to pass it around and assign it to other functions without executing it. 
+                    <br><br>
+                </p>
+                    <h3>Try-block</h3>
+                <p>
+                    You use the try-block when you you're code might raise an exception/error
+                    <br><br>Instead of crashing the code and stopping the entire program you can define an error message and proceed with the remaining program. 
+                    <br><br><strong>NOTICE :</strong>You always need to use an " except " - block when you use a " try "-block (like an if - else statement)
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="decorators">
+                <h2>Decorators</h2>
+                <p>
+                    Decorators are functions which modify the functionality of other functions and help to make the code shorter.
+                    <br><br>They are useful if you want to use functions on multiple other functions 
+                    <br><br>With a decorator you only need to define the wrapper function once and then can decorate every other function with it
+                    <br><br>These are the steps you need to take :
+                    <br><br>1. create a decorator-function-name(function-name of the function that should be wrapped)
+                    <br><br>2. define wrapper function within decorator function : def wrapper(parameter)
+                    <br><br>3. place function you want to be wrapped inside the wrapper function
+                    <br><br>4. return wrapper-function 
+                    <br><br>5. " @decorator-function-name( ) def wrapped-function-name( ): function body "
+                    <br><br>6. call the decorated function " wrapped-function-name( )"
+                </p>
+
+            </article>
+
+            <hr>
+
+            <article>
+                <h2>Threads</h2>
+                <p>
+                    In order to create threads you need to import the " threading " module.
+                    <br><br>You create a thread-object by assigning " thread-name = threading.Thread( target=function-name, args=(parameter of the function, ) )"
+                    <br><br>when the argument of the function is a tuple you need to use a comma after the argument ! 
+                    <br><br>" thread-name.start() " starts the thread-object 
+                    <br><br>With threads you can run multiple functions simultaneously
+                    <br><br>In order to ensure that the main thread waits for all threads to finish their computations before resuming you need to use 
+                    <br><br>" thread-name.join() " for every thread that you're running 
+                </p>
+
+                <h2>Queue Module</h2>
+                <p>
+                    by importing the queue module and creating a " queue-variable = queue.Queue() " you can share data between threads 
+                </p>
+            </article>
+
+
+            <hr>
+
+            <article>
+                <h2>Multiprocessing</h2>
+                <p>
+                    You need to import the " multiprocessing " module in order to create processes and to use shared memory for IPC
+                    <br><br>Create a process-object by assigning " process-name = multiprocessing.Process( target = function-name , args = ( parameters, ) ) "
+                    <br><br>You start the process-object with " process-name.start() "
+                    <br><br>Every process has its own adress space (virtual memory), this means you can't store the process results in a global result
+                    <br><br>If you want to share data between processes you need to use interprocess communication (IPC) techniques 
+                </p>
+
+                <h2>Shared Memory</h2>
+                <p>
+                    Shared memory exists outside the processes 
+                    <br><br>1. you need to create a shared memory variable
+                    <br>variable = multiprocessing."array"("type",size)
+                    <br><br>2. add the variable to the parameters of your process-object
+                    <br><br>shared memory has a different method list : 
+                    <br><br>3. in order to add items to a list you need use an index 
+                    <br>for iteration through an array : " for idx, n in enumeratre ( numbers ): "
+                    <br>variable [ idx ] = ...
+                    <br><br>4. you need to create a value-variable :
+                    <br>" value = multiprocessing.Value()"
+                    <br><br>When you want to print the multiprocessing.Array you need to convert it to a list first " list(variable)"
+                </p>
+
+                <h2>Multiprocessing Queue</h2>
+                <p>
+                    A multiprocessing queue is basically a shared memory.
+                    <br><br>1. create a " queue-variable = multiprocessing.Queue()
+                    <br><br>2. add the queue-variable to the process arguments & function paramaters 
+                    <br><br>3. for the iteration use " for n in function-parameter: "
+                    <br>q.put( ... )
+                    <br><br>4. to print the results use " while q.empty ( ) is False: print(q.get( ) )"
+                </p>
+
+                <h2>Multiprocessing locks</h2>
+                <p>
+                    Locks are required to ensure that a process is fully executed before another can access that share value and change it.
+                    <br><br>1. create a lock variable " lock-variable = multiprocessing.Lock( ) "
+                    <br><br>2. pass that lock-variable to the process-arguments and the function parameters 
+                    <br><br>3. inside the functions :  use " lock.acquire( ) " before the change to the shared value
+                    <br><br>4. inside the functions : use " lock.release( ) " after the change to the shared value
+                    <br><br>
+                    
+                </p>
+
+                <h2>Multiprocessing pool</h2>
+                <p>
+                    Distributing a task to multiple cores of your CPU is called parallel processing
+                    <br><br>Dividing the task to the different cores is called " map "
+                    <br><br>Aggregating the results together is called " reduce "
+                    <br><br>1. In order to use it you need to " from multiprocessing import Pool "
+                    <br><br>2. create a pool object " p = Pool( )"
+                    <br><br>3. use " result = p.map( function-name,variable or range you want to divide ) "
+                    <br><br>4. use " p.close( ) "
+                    <br><br>5. use " p.join( ) "
+                    <br><br><strong>NOTICE :</strong>pool is only faster when a lot of computational tasks are required 
+                    <br><br>You can define how many processes are created by setting this this parameter inside the pool object parameter " p = Pool(processes = X ) "
+                    <br><br>If you don't specify a number of processes it defaults to using the numer of available CPU cores.
+                </p>
+            </article>
+
+
+            <hr>
+
+            <article id="assigning-data">
+                <h2>Assigning Data</h2>
+                <p>
+                    You can assign values to a variable in two ways:
+                </p>
+
+                <ol>
+                    <li>
+                        <p>By using a literal assignment : variable = value</p>
+                    </li>
+
+                    <li>
+                        <p>By using a constructor function : variable = str("value")</p>
+                    </li>
+                </ol>
+
+                <h2>Concatenation</h2>
+                <p>
+                    By using a concatenation you can add two strings to form a larger string.
+                    <br>Example : z = x + " " + y. 
+                    <br>After you did this you can add things to the string by using z += "..."
+                    <br><br><strong>Note</strong>: If you want to concatenate an integer this first needs to be constructed into a string!
+                </p>
+
+                <h2>Casting a number to a string</h2>
+                <p>
+                    By using a constructor function you can cast a number to a string.
+                    <br>Example : decade = str(1990)
+                    <br>This is useful if you want to use a number within a concatenation.
+                </p>
+
+                <h2>Multiline statements</h2>
+                <p>
+                    You can create paragraphs with white spaces by using multiline = ''' ... '''
+                </p>
+
+                <h2>Escaping special characters</h2>
+                <p>
+                    By using a backslash \ before an " ' " it stops the " ' " from ending the value.
+                    <br>This is important if you want to write a sentence that contains words with ' like "I'm" - otherwise 
+                </p>
+
+                <p>
+                    Using \t creates a tab.
+                    <br>Using \n creates a new line.
+                    <br>If you want to write a \ you need to use two "\\"
+                </p>
+
+            </article>
+
+            <hr>
+
+            <article id="string-methods">
+                <h2>String Methods</h2>
+                <p>
+                    Methods are functions called on the class.
+                    <br><br>By " variable = variable.lower( ) " every letter is lowercase.
+                    <br><br>By " variable = variable.upper( ) " every letter is uppercase.
+                    <br><br>By " variable = variable.title( ) " the first letter of every word is capitalized.
+                    <br><br>By " variable = variable.replace("xxx","zzz") " the xxx will be replaced by zzz.
+                    <br>
+                    <br><br>Using " len(variable) " shows the lenght of the string.
+                    <br><br>By using " variable = variable.center(x,"y") " the variable gets centered within the character/symbol y - <strong>the width ( x ) is the width of the total string, so you have to consider the length of the initial string !</strong>
+                    <br><br>By using " variable.ljust(x, "y") " the variable will be adjusted to the left and the remaining characters will be filled with y.
+                    <br><br>If you want to adjust something to the right you need to use .rjust.
+                </p>
+
+                <p>
+                    If you want to remove white space you can do so by (variable.strip())
+                    <br>If you want to remove white spaces from the left side you can do so by using " variable.lstrip() ".
+                    <br>If you want to remove white spaces from the right side you can do so by using " variable.rstrip() ".
+                </p>
+
+                <p>
+                    You can also apply methods directly when assigning variables.
+                    <br>Example : title = "menu".upper()
+                </p>
+
+                <h2>String index values</h2>
+                <p>
+                    <strong>Indexes start at 0</strong>!
+                    <br>Example : print(variable[2]) prints the <strong>third</strong> letter/number of that variable.
+                    <br><br>If you want to get the last character in a string you can use the "-1" index.
+                    <br><br>If you want to get a specific range of characters you can start at any index and define an ending position 
+                    <br>Example : print(variable[x:-1]) 
+                    <br><strong>Note</strong>: Only the characters between both indexes will be printed!
+                    <br>If you want to include the last characters of the string you need to set the range to [-x:]
+                </p>
+
+                <h2>Boolean Data</h2>
+                <p>
+                    .startswith(x) returns if the variable starts with x
+                    <br><br>.endswith(x) returns if the variable ends with x
+                </p>
+
+                <h2>Boolean Data Type</h2>
+                <p>
+                    When you assign a bolean value (True/False) to a variable you need to use capital first letters! 
+                </p>
+
+            </article>
+            
+            <hr>
+
+            <article id="data-types">
+                <h2>Numeric Data Types</h2>
+
+                <h2>Integer Type</h2>
+                <p>
+                    You can assign integers bei either entering a number for the value or using int(...) as the value.
+                    <br>Example : price = 20 or best_price = int(15)
+                </p>
+
+                <h2>Float Type</h2>
+                <p>
+                    Float types consist of decimal numbers.
+                    <br>Example : gpa = 2.79 or gpa = float(2.79)
+                </p>
+
+                <h2>Complex Type</h2>
+                <p>
+                    Complex value are assigned like this : com_value = 5+3j
+                    <br>Depending on if you want to print the real or the imaginary part you either use .real or .imag.
+                </p>
+
+                <h2>Functions for numbers</h2>
+                <p>
+                    "abs(x)" checks the absolute value of x.
+                    <br><br>"round(x)" rounds to the nearest integer
+                    <br><br>"round(x,1)" rounds to the nearest decimal
+                </p>
+
+                <p>
+                    Depending on what function you want to use you need to import different modules like sys, enum etc.
+                </p>
+            </article>
+            
+            <hr>
+
+            <article id="moduls">
+            <h2>Enums</h2>
+            <p>
+                Classes with attributes(members), which have names and values that don't change, are calles enums.
+                <br> In order to create enums you need to to be import the enum module.
+                <br>The attributes need be written in all capital letters.
+            </p>
+
+            <h2>Exits</h2>
+            <p>
+                When the user inputs something wrong using exit functions stops the program from continuing while still providing an output.
+                <br>To do so you need import the sys module
+            </p>
+
+
+            <h2>Randoms</h2>
+            <p>
+                You can create random choices by using random methods (random.choice(xyz)).
+                <br> In order to do this you need to import the random module.
+            </p>
+
+            </article>
+
+            <h2>Else If function</h2>
+            <p>
+                An else-if function can contain only one if and one else element, but it can contain unlimited elif (else if) elements.
+                <br><br>The if-element can contain multiple conditions, which can be combined with "and" / "or".
+            </p>
+
+            <article id="lists">
+                <h2>Lists</h2>
+                <p>
+                    You can create lists by giving a variable multiple values (items) within square brackets, which are seperated by " , " : ['...','...','...']
+                    <br><br>You can also create a list by using " list-name = list([integer , "string"], True/False]) " . 
+                </p>
+
+                <p>
+                    You can check if a value is part of a list by " print("value" in list-name ) ".
+                    <br><br> <strong>Checking if a user-input is part of a list/dictionary</strong> : 
+                    <br>variable = input("ask for any input") 
+                    <br>if variable in list / dictionary-name : if - elif - else statement ..
+                    <br><br><br><strong>NOTICE :</strong> Checking if a string / integer is part of a list / dictionary requires them to be EXACTLY the same -> use " input-variable = input-variable.lower() / .capitalize() etc. " to make sure they have the right "format"
+                    <br><br>When you want to get a List item you can use " print(list-name[position of item]) "
+                    <br><br>If you want to know the position of a value(item) within the list you can use " print(listname.index('item')) ".
+                    <br><br>If you want to get multiple items within a range you can use " print(list-name[x:z]) ".
+                    <br><br>Or you can use " print(list-name[x:]) " in order to get the whole list from a defined position.
+                    <br><br>By using " print(len(list-name)) " you can get the length of the list.
+                    <br><br>This ---- forgot what I wanted to write here 
+                    <br><br>
+                    
+                </p>
+
+                <h2>Accessing items</h2>
+                <p>
+                    If you want to access a value from a list in order to assign it to a variable all you need to do is " variable = list-name[index-number]"
+                    <br><br>if the value is an integer it's best to use " variable = float(list-name[index-number])"
+                </p>
+
+                <h2>Adding Lists</h2>
+                <p>
+                    You can add items to a list by using " listname.append('new value')" - if you're adding an integer you don't need quotes
+                    <br><br>You can also add lists by using " list-name += list-name2 " or " list-name += ['item1', 'item2', ...] "
+                    <br><br>You can also use " list-name.extend(['item1','item2']) " or " list-name.extend(list-name2) ".
+                    <br><br>If you want to add only one value at a specific position you need to use " list-name.insert(position, 'value').
+                    <br><br>If you want to add a list to a specific position without replacing items you need to use " list-name[x:x] = [ 'item1','item2',... ] " or " list-name[x:x] = list-name2 "
+                    <br><br>If you want to add list items to specific positions you need to use " list-name[x:y] = ['item1', 'item2'] " <strong>NOTICE</strong>: This will replace existing items!
+                </p>
+
+                <h2>Removing Items</h2>
+                <p>
+                    You can remove items by using " list-name.remove('item') ".
+                    <br><br>By using the pop-method you can remove the last item from a list :
+                    <br><br> " print(list-name.pop()) "
+                    <br><br>You can delete items by using " del list-name[position] " .
+                    <br><br>You can clear a list by using " list-name.clear()" .
+                </p>
+
+                <h2>Sorting Lists</h2>
+                <p>
+                    If you want to sort your list alphabetical you need to use " list-name.sort() " .
+                    <br><br><strong>NOTICE</strong>: strings starting with capital letters will be sorted first!
+                    <br><br>If you want to sort a list consisting of capitalized and uncapitalized items you need to use " list-name.sort(key=str.lower) " .
+                    <br><br>By using the reverse-method you reverse the position of the items in a list 
+                    <br>" list-name.reverse() "
+                    <br><br>If you want to sort a list in a reverse order you need to use " list-name.sort(reverse=True) ".
+                </p>
+
+                <h2>Copying Lists</h2>
+                <p>
+                    You can copy a list by using "list-name = list-name2.copy() " .
+                    <br><br>or " list-name2 = list(list-name1) " .
+                    <br><br>or " list-name2 = list-name1[:] " .
+                </p>
+
+                <h2>Combining lists</h2>
+                <p>
+                    You can create a new list by creating the loop inside brackets [ ]
+                    <br><br>Example : " list-name = [variable for variable in other-list-name if condition ] "
+                </p>
+                
+                <h2>Iterating through lists</h2>
+                <p>
+                    You can iterate inside a list by using " ... i for i in list-name "
+                </p>
+
+                <h2>searching in lists</h2>
+                <p>
+                    If you want to search for a specific value/string in a list use " if value/string in list-name : command "
+                </p>
+                <h2>Sets</h2>
+                <p>
+                    If you want to get the difference of two sets you can simply use the minus operator ( - ). 
+                    <br><br>The set that comes first remains, so the corresponding items in set 2 are being subtracted.
+                </p>
+
+                <h2>Tuples</h2>
+                <p>
+                    The data in tuples and the order of the items doesn't change.
+                    <br><br>" tuple-name = tuple(('string',integer,boolean)) "
+                    <br><strong>NOTICE</strong>: it's important to use two brackets!
+                    Or you can create a tuple like this : " tuple-name = (integer,integer,'string')
+                    <br><br>If you want to make changes to a tuple you need to assign it as a new list first, then do the changes and create a tuple by assigning a tuple to the new created list.
+                </p>
+
+            </article>
+
+            <hr>
+
+            <article id=Dictionaries>
+                <h2>Dictionaries</h2>
+                <p>
+                    Dictionaries use curly brackets {} and consist of multiple keys with values.
+                    <br>They keys as well as the values each need to be within " "
+                    <br>the key and value are seperated by a " : " and key-value pairs are seperated by a " , "
+                    <br>Example : artists = { "rock" : "Nirvana"} 
+                    <br><br>Another way to create dictionaries is to use the constructer-function " dict " . 
+                    <br>Example : dictionary-name = dict(key="value",key2="value2")
+                </p>
+
+                <h2>Accessing Items</h2>
+                <p>
+                    If you need to get a specific value from a key you can use " dictionary-name["key"] "
+                    <br>or " print(band.get("key")) ".
+                    <br><br>If you want to get a list of all keys you need to use " dictionary-name.keys() ".
+                    <br><br>If you want to get a list of all values you need to use " dictionary-name.values() ".
+                    <br><br>If you need a list of key/value pairs as tuples you need to use " dictionary-name.items() ".
+                    <br><br>You can verify if a key exists by using " "key" in dictionary-name ".
+                    <br><br>If you want to print all keys & values : you need to create a function with a for loop : " for keys, values in dictionary-name.items( print (f" { keys } ... { values } ) ) "
+                </p>
+
+                <h2>Changing values</h2>
+                <p>
+                    If you want to change the value of a key you need to use " dictionary-name["key"] = "new value"
+                    <br><br>You can add key/value pairs by using a update method like this :
+                    <br> " dictionary-name.update({"new key" : "new value"}) "
+                </p>
+
+                <h2>Adding items</h2>
+                <p>
+                    You add items by using " dictionary-name["key"] = value "
+                </p>
+
+                <h2>Removing Items</h2>
+                <p>
+                    You can remove items by using the pop-method : " dictionary-name.pop("key") "
+                    <br><br>By using the popitem-method you remove the item that was added last as a tuple.
+                    <br>Example : dictionary-name.popitem()
+                    <br><br>In a function : use <strong>del dictionary-name [key]</strong>
+                </p>
+
+                <h2>Delete / Clear Dictionaries</h2>
+                <p>
+                    You can delete items from a dictionary by using " del dictionary-name["key"] ".
+                </p>
+
+                <h2>Copy Dictionaries</h2>
+                <p>
+                    You can create independent copies of a dictionary  like this : " dictionary-name1 = dictionary-name2.copy() ". 
+                    <br><br>Or you can use the constructor function : " dictionary-name2 = dict(dictionary-name1) "
+                </p>
+
+                <h2>Printing dictionaries</h2>
+                <p>
+                    You can print a dictionary using a for loop : " for key in dictionary-name: print( "key:",key,"value",dictionary-name[key] ) "
+                    <br><br>or you can use " for k,v in d.items() : print ( "key:",key,"value:",v ) "
+                </p>
+                
+                <h2>Nested Dictionaries</h2>
+                <p>
+                    The value for a key can be another dictionary.
+                    <br>If you use nested dictionaries and want to get the value or item of the "initial" dictionary, you need to go deeper 
+                    <br>Example : " print(dictionary-name["key"][key])"
+                </p>
+
+                <h2>Zip-function</h2>
+                <p>
+                    With the zip-function you can you can create a zip object, which is an iterator
+                    <br><br>it generates the items one by one as you iterate over it 
+                    dictionary out of two lists
+                    <br><br>To see the contents of the zip object have to either convert it into a list or iterate over it
+                    <br><br> " print(list(variable)) // for pair in variable : print(pair) "
+                    <br><br>The items with the same index of each iterator ( tuples ) are paired together.
+                    <br><br>You need to assign zip(tuple1,tuple2) to a variable and then assign a dictionary to a variable 
+                    <br><br>Example : " variable = zip(tuple1, tuple2) "
+                    <br>" dictionary-name = { tuple1 : tuple2 for tuple1, tuple2 in variable } "
+                    <br>instead of the variable you can also use zip(tuple1, tuple2)
+                </p>
+
+                
+            </article>
+
+
+            <hr>
+
+            <article id="sets">
+
+                <h2>Sets</h2>
+                <p>
+                    Sets are unorderd collections, this means you can't access items with the index
+                    <br><br>Sets don't allow duplicates, even if there are duplicates in the set they won't show when you print / use that set
+                    You can create a set either by using " set-name = { integer, integer, integer, ..}"
+                    <br>or by the set constructor funtion : set-name = set((integer,integer,integer,..))
+                    <br><br>You can add a new element to a set by using "set-name.add(x)"
+                    <br><br>You can also add items from another set by using the update-method:
+                    <br>set-name.update(set-name2)
+                    <br> <strong>You can update with lists, tuples or dictionaries</strong> too.
+                    <br><br>You can merge two sets by using the union-method:
+                    <br>new set-name = set-name1.union(set-name2)
+                    <br><br>If you want to find out the intersection of two sets use the intersection_update - method : 
+                    <br>set-name1.intersection_update() or " set-name1 & set-name2 "
+                    <br><br>If you want to check for non duplicates within two sets you can use the symmetric_difference_update-method:
+                    <br>set-name1.symmetric_difference_update(set-name2)
+                    <br><br>When you want to get rid of duplicates in a list just turn the list into a set with " set-name = set(list-name) "
+                    <br><br>with using " set-name1 | set-name2 " you can find out the union of two sets ( all elements from set-name1 and set-name2)
+
+                </p>
+
+                <h2>Frozen sets</h2>
+                <p>
+                    When a set is frozen you're unable to change the content of it. 
+                    <br><br>You initialize a frozen set with " set-name = frozenset(list-name) " 
+                    <br>or " set-name = {content 1, content2, ...}"
+                </p>
+
+
+            </article>
+
+            <hr>
+
+            <article id="handling files">
+                <h2>opening / reading files</h2>
+                <p>
+                    You can open a file within a program and assign it to a variable in order to interact with the file. 
+                    <br><br>This creates a file : " variable = open( "C:/Users/username/Documents/vscode/project-folder/file-name","opening mode" ) "
+                    <br><br>You always need to close the file in order to finally save it 
+                    <br><br>using " with " ensures the file is properly closed after you're done using it 
+                    <br>" with open ( " path "," mode" ) as variable: "
+                    <br><br>When you use " file_path = os.path.expanduser ( "path" ) " you can use " ~ " instead of " C:/Users/username "
+                    <br><br>there are different modes you can open the file in:
+                    <br><br>1. read ( "r" ) : only able to read content
+                    <br><br>2. write ( "w" ) : if file doesn't exist, creates the file / if it exists it erases everything in the file before writing
+                    <br>to write in the new file you need to assign a variable to the file and then use " variable.write( "header1, header2, header3, ..." )"
+                    <br><br>3. append ( "a" ) : if file doesn't exist, creates the file and adds new data to the end / if it doesn't exist it adds new data to the end 
+                    <br><br>4. read & write ( "r+" ) : opens file for both reading and writing <strong>FILE MUST ALREADY EXIST</strong>
+                    <br><br>5. write & read ( "w+" ) : opens file for both writing and reading - creates the file if doesn't exist / deletes everything if file exists already 
+                    <br>to write in the new file you need to assign a variable to the file and then use " variable.write( "header1, header2, header3, ..." )"
+                    <br><br>6. append & read ( "a+" ) : opens file for appending & reading - creates file if doesn't exist / adds new data to the end of the file 
+                    <br><br><strong>If you want to read and write binary data (e.g. images, videos, or other non-text files) </strong> : use binary mode ( "b" ) -> ( "rb" / "wb" / etc. )
+                </p>
+
+                <h2>Writing files</h2>
+                <p>
+                    You create the content of the file with " variable.write("Content") "
+                    <br><br><strong>NOTICE : </strong> After writing you always need to close the file with " variable.close() " in order to free up resources of your computer.
+                    <br><br>The content doesn't need to be a specific string, it can also be a variable or a combination of both
+                    <br>Example : " f_out.write(line + "wordcount:" + str(len(tokens)) ) "
+                </p>
+
+                <h2>.split</h2>
+                <p>
+                    by using " line.split(",") " you can create a list of content that's inside a line. In the quotes inside the parenthesis you set the punctioation mark that seperates each item of that line.
+                    <br><br>( " " ) seperates each item when there is a " space " between them
+
+                </p>
+                <h2>files as variables</h2>
+                <p>
+                    with " as variable " you can assign a file to a variable in order to interact with it within your code
+                </p>
+
+
+                <h2>Iterating through files</h2>
+                <p>
+                    You can iterate through files with for loops:
+                    <br><br>" for line in file-variable: "
+                    <br><br>If you want to get the list of the content for each line use " tokens = line.split( ' , ' or ' ') "
+                    <br><br>If you want to print this list use " print(str(tokens)) "
+                    <br><br>If you want to get the lenght of that list use " len(tokens) "
+                </p>
+                <h2>Paths</h2>
+                <p>
+                    When you run a file the script path is the path to the file you're running. 
+                    <br><br>The Current working directory ( CWD ) is the the folder that the file is in
+                    <br><br>When you don't specify an absolute path vs code looks for the file you want to open in the CWD -> this could cause errors when the file is not in the CWD 
+                    <br><br>
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="Loops">
+                <h2>While-Loops</h2>
+                <p>
+                    While-loops execute a block of code while a condition is True.
+                    <br>The loop repeats until the condition is no longer true.
+                    <br><br>or when a break-statement within an if-statement is reached.
+                    <br><br>By using a continue-statement you can skip the action that comes after it in the loop.
+                    <br>Example: while value &lt;= 10:
+                    <br>            value += 1
+                    <br>            if value == 6:
+                    <br>                continue
+                    <br>            print(value)
+                    <br><br>In this example when the value is 6 the loop continues without printing the number 6 and instead starts printing number from 7.
+                    <br><br>By using an else-statement at the end of a while-loop you can print a "summary" that shows the loop is finished.
+                    
+                </p>
+
+                <h2>For-Loops</h2>
+                <p>
+                    With for-loops you can iterate the individual items of a list 
+                    <br>Example : " for item in variable: "
+                    <br>                        print(item)
+                    <br><br>Searching for an item / element in dictionaries / lists :
+                    <br><br>" for <strong>variable</strong> in <strong>dictionary / list-name</strong> : "
+                    <br> " if variable == "element/item" or integer : command "
+                    <br><br>If you want to iterate the letters of a string use:
+                    <br>for ... in "string":
+                    <br>        print(...)
+                    <br><br>You can also iterate in ranges : " for ... in range(.. , .. , ..) "
+                    <br><br>By using an else-statement you can print an "ending text" / create a summary for when the iteration is over.
+                    <br><br>with " range " you can generate a sequence that will be iterated through 
+                    <br><br><strong>NOTICE :</strong> " range " <strong>excludes</strong> the upper bound
+                    <br>example : for i in range (2,6) creates the sequence [2,3,4,5]
+                    <br><br>
+                </p>
+
+                <h2>Continue</h2>
+                <p>
+                    The continue statement starts the loop again when a condition is true, so every following line of code isn't executed.
+                </p>
+
+                <h2>Break</h2>
+                <p>
+                    The break statement stops a block of code when a condition is true.
+                </p>
+
+                <h2>Ranges</h2>
+                <p>
+                    " range(4) " is a range of 4, starting  from 0 to 3.
+                    <br><br> " range (2,4) " starts at position 2 and goes up to 4.
+                    <br><br> " range (0,100,5) " starts at position 0 and goes up to 100 in increments of 5.
+                </p>
+
+                <h2>Nested Loops</h2>
+                <p>
+                    You can nest a loop into another loop.
+                    <br>The first loop will stay on the first item of it's list until the second loop is fully finished.
+                    <br>or : what iterates in the outside loop stays until the inner loop is finished.
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="functions">
+                <h2>Functions</h2>
+                <p>
+                    First you need to define a function by using " def function-name(): "
+                    <br><br>The function name needs to be all lowercase, if it's supposed to consist of multiple words you can only use an underscore _  .
+                    <br>Sometimes functions need to receive data. We can use placeholders for that data, which are called parameters.
+                    <br>They are inside the brackets after the function-name : " def function-name(parameter1, parameter2) "
+                    <br><br>You call a function by typing " function-name(argument1, argument2, ...) "
+                    <br><br>Parameters never change, whereas arguments change depending on what you try to achieve.
+                    <br>The arguments are the data for the function.
+                    <br><br>By using a return-function the result of the function will be returned and can be used as a variable for example.
+                    <br><br>You should check the type of the parameters in order to guarantee that the function works properly.
+                    <br>To do thise use an if statement and an early return if the criteria isn't fulfilled to avoid further processing of the function.
+                    <br><br>If you want a constant argument you can assign the parameter a value inside the function.
+                    <br>This way you only need one argument when calling the function.
+                    <br><br>To prevent errors it's smart to assign the parameters the value of 0, in case the user forgets an argument.
+                    <br><br>You can use " return 0 " in order to reveive a 0 instead of none.
+                    <br><br>When you don't know how many arguments you're going to receive you can use " * args " for the parameters.
+                    <br>The " * " makes the data inside the function a tuple that you can work with like any other tuple.
+                    <br><br>When you don't know how many arguments you're going to receive you can also use " ** kwargs " for the parameters.
+                    <br>The " ** " make the data inside the function a dictionary that you can work with like any other dictonary.
+                </p>
+
+            </article>
+
+
+            <article id="recursion-function">
+                <h2>Recursion Function</h2>
+                <p>
+                    Recursion happens when a function calls itself.
+                    <br><br>A function that returns a value, then assigns a new variable and then returns the same function (starts the function again) with the new value. 
+                
+                    <br><br>" while value " is the same as " while value = true " -> While value is set to true (1) the following lines will be continued.
+                    <br><br>
+
+                </p>
+            
+            </article>
+
+            <hr>
+
+            <article id="generators">
+                <p>
+                    Using  " yield value "  returns a value without terminating the function, so in an endless loop the program remembers the value and continues from the last " iteration "
+                    <br>return would end the loop after the first iteration 
+                    <br><br>When you use " yield " it produces values only one at a time 
+                    <br><br><strong>CONS : </strong> generators can only iterate once - if you need to re-iterate you need to recreate the generator and " reset " the yield-value. 
+                </p>
+
+            </article>
+
+            <hr>
+
+            <article id="scopes">
+                <h2>Scopes</h2>
+                
+                <h2>Global Scope</h2>
+                <p>
+                    When you assign a value to a variable this variable is accessable by the whole code -> within the global Scope
+                </p>
+
+                <h2>Local Scope</h2>
+                <p>
+                    A parameter from a function is only accessable within that function.
+                    <br><br>A function can access the global scope though. <strong>NOTICE</strong>: the parameter from the function needs to be different to the variable in the global scope.
+                    <br><br>You can define functions within another function.
+                    <br><br>By calling the parent function both the parent and the child function will be executed.
+                    <br><br>If you have the same variable in both the global and the local scope and you want to use a different value for that variable in the local scope, you need to use the global keyword " global + variable " and in the next line add to get the needed value with " += " . 
+                    <br><br>If you want to modify a value that was defined in a parent function within a nested function you need to use the nonlocal keyword. THis tells the function that you're using the variable of the parent function and let's you modify it in the next line.
+                </p>
+            </article>
+            <p>
+                You can reverse-tab in order to push a selected block of code to the left by using " shit + tab "
+            </p>
+
+            <hr>
+
+            <article id="closures">
+
+                <h2>Closures</h2>
+                <p>
+                    A closure is a function having accesss to the scope of its parent function after the parent function has returned.
+                    <br><br>By using a closure function you can track the value of a variable in the parent function which parameter can change ( for example different players ) .
+                    <br><br>You don't need to define the variable in the parent function, instead you can also have it as a parameter that is set when the function is called.
+                </p>
+
+            </article>
+
+            <article id="different-string-methods">
+                <h2>Different String Methods</h2>
+                <p>
+                    You can use " %s " within a string and then " define " the " %s " afterwards like : " %s ( variable1, variable2, ... ) "
+                    <br><br>By doing this you don't need " + " when concateing multiple elements within a string.
+                    <br><br>When you use f-strings you replace the " %s " with curly brackets " {} " and add " .format(variable1, variable2, ...) " at the end.
+                    <br><br>If you want to use the variables in a different order you can assign the index numbers inside the curly brackets.
+                    <br><br>You can also set the value of the variables within the format-method, if you have for example the same variable for different categories.
+                    <br><br>When you assign a variable using a dictionary all you need to do is use " ** variable " to pass in the format-method.
+                </p>
+
+            </article>
+
+            <article id="f-strings">
+                <h2>F-Srings</h2>
+                <p>
+                    F-strings start with " f ". 
+                    <br><br>By using F-strings all you need to to is refer to the variable within curly brackets.
+                    <br><strong>NOTE</strong>: You don't use brackets after the f !
+                    <br><br>Using F-strings allows you to insert equations 
+                    <br><br>You can also use methods for the variables like " .lower " to make the value of the variable all lowercase.
+                    <br><br>When you use a dictionary as a variable you then need use square brackets [ ] and put the key inside of quotes ( '  ' ) because double quotes are already used for the string.
+                    <br><br>You can use formatting for variables as well.
+                    <br><br> <a href="https://www.w3schools.com/python/python_string_formatting.asp" target="blank">Different formatting types</a>
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="Parser">
+                <h2>Argparse</h2>
+                <p>
+                    By using a parser you can write command-line interfaces
+
+                    <br>These are the steps you need to take:
+                    <br>
+                    <ol>
+                        <li>
+                            import the argparse module to be able to accept arguments from the command line. <br><br>
+                        </li>
+                        <li>
+                            define a parser that's " = " to argparse."..." and provide settings (depending on what kind of parser you're using) and add a description.
+                            <br><br>example : parser-name = argparse.ParserType()
+                            <br><br>With an ArgumentParser object you can handle command-line arguments passed to your python script
+                            <br>It parses the arguments into meaningful variables <br><br>
+                        </li>
+                        <li>
+                            add an argument to the parser with the inputs that are required:
+                            <br> (metavar="required input"), "required=True/False", type=str/int, help="description of what the argument does"
+                            <br><br>the arguments start with an argument name , when they are optional they start with " - " or " - - " <br><br>
+                        </li>
+                        <li>
+                            Define a variable that stores the different arguments from the terminal -> the variable now is an object that contains attributes
+                            <br>these attributes can then be accessed in order to execute actions like printing them
+                            <br><br>in order to store the arguments in the variable you need to use a method on the parser -> in this case " parse_args( ) "
+                            <br><br>it reads the arguments provided in the command line, stores them as attributes and validates the type if specified 
+                             <br><br>
+                        </li>
+                        <li>
+                            Define a message " msg " and put the parser in curly brackets with the required input.
+                            <br>Example : The argument requires a name ( "-n" ) , then you would need to use {args.name} to use the users input.
+                        </li>
+                    </ol>
+                   <p>
+                    <h3>running the parser</h3>
+                    Now for running the parser in the terminal you need to type "py (iOS/Linux : python3)" + file-name + arguments
+                    <br><br> with positional arguments : " py file-name argument1 argument2 ..."
+                    <br><br> with optional arguments : " py file-name --argument-name1 argument1 --argument-name2 argument2 --argument-name X argument X"
+                    <br><br>By typing " -h " you access the help to find out which inputs are required
+                    <br><br>You then need to type in the required values & strings.
+                    <br><br><strong>NOTICE : </strong>whenever you pass in an input using the command line it always comes back as a string -> you need convert it into an integer 
+                   </p>
+                </p>
+
+                <h2>positional & optional arguments</h2>
+                <p>
+                    optional arguments :  argument name starts with " - " or " - - "
+                    <br><br>the argument (value) needs to be passed starting with the argument name like " --argument name value "
+                    <br><br>clarifies which input is which by requiring the argument name as well as the value of the argument and let's you change the order of the inputs
+                    <br><br>the parser is able to run if certain arguments aren't passed
+                    <br><br>positional arguments : argument name doesn't include hyphens ( - )
+                    <br><br>the parser requires the input in the same order that the arguments are defined 
+                    <br><br> the parser doesn't work when you don't pass every defined argument
+                    <br><br>If you want to restrict the user from entering an undefined input use " choices = ["operation1", "operation2", ...]" inside the parser arguments
+                </p>
+            </article>
+
+
+            <hr>
+
+            <article id="different-functions">
+                <h2>Lambda Functions</h2>
+                <p>
+                    A single expression that returns a value without using the return keyword.
+                    <br>They are anonymous which means you can't call lambda functions.
+                    <br>BUT you can assign a value to a lambda, so basically you can have a value that serves as a function.
+                    <br><br>Effectively it's like defining a function with a return keyword.
+                    <br><br>Useful when you need a quick function (that you don't need later) within another function.
+                    <br><br>
+
+                </p>
+
+                <h2>Higher order Functions</h2>
+                <p>
+                    A function that takes one or more functions as arguments / a function that returns a function as its result.
+                </p>
+
+                <br>
+                
+                <h3>Built in Functions</h3>
+                <p>
+                    <br>"map" is a function built in to python that receives a function as the first argument and the data collection as the second argument.
+
+                    <br><br> " % " returns the remainder of division 
+                    <br>"filter" is a function that filters a data collection based on a result of a function.
+
+                    <br><br>"reduce" is a function that adds everything together, it needs to be imported from "functools".
+                    <br>The function that "reduce" accepts requires two parameters:
+                    <ol>
+                        <li>the accumulator (or subtotal)</li>
+                        <li>the curr (current item)</li>
+                    </ol>
+                    <br>You can add an optional starting value as a third parameter as well.
+                    <br><br><strong>NOTICE:</strong> when using strings the starting value is <strong>NOT</strong> optional!
+                </p>
+                
+            </article>
+
+            <hr>
+
+            <article id="classes">
+                <h2>Classes</h2>
+                <p>
+                    The name of every class needs to be capitalized.
+                    <br><br>Classes define what attributes and methods objects of that class will have.
+                    <br><br><strong>The first step</strong> is to define the attributes, these need to be defined with an initializer-function " def __init__(self,parameter1, parameter2, ...): self.parameter1 = "
+                    <br><br>the " self.parameters " are the attributes of the class, they need to be set equal to the parameters of the function 
+                    <br><br>You use these attributes in order to perform different methods on the objects of the class  
+                    <br><br> <strong>The second step</strong> is to define the different methods of that class  " def method-name(self): self.parameter == " " "
+                    <br>in this function the properties are compared to an integer or string in order to execute a different action
+                    <br><br>You can create multiple objects (instances) from the same class.
+                    <br><br>After creating a class you can create objects from that class by assigning the name of the class to a variable with the required parameters
+                    <br>example : " variable = class-name(parameter1,parameter2) "
+                    <br><br>After creating the object you can then call the method on the object, <strong>don't forget the parenthesis to actually be able to call the method</strong>.
+                    <br><br>with self you can access and modify the instance's attributes and methods 
+                    <br><br> in order to store specific values for each object (instance) of the class you need instance variables starting with " self. "
+                </p>
+
+                <h2>Creating instances</h2>F
+                <p>
+                    You create class objects ( instances ) by assigning the class-name(properties) to a variable " variable = class-name(property1,property2,..) "
+                </p>
+                <h2>Specific Classes</h2>
+                <p>
+                    If you want to be more specific you can create classes that depend on the "parent" class.
+                    <br><br>You do so by using " class child-class-name(parent-classname) "
+                    <br><br>first you need to use the initializer function " __init__(self) " to initialize the attributes of the classes objects
+                    <br><br>( if you don't have methods that require specific values you don't need the initializer-function )
+                    <br><br>By using "super( ).__init__(property1,property2, etc.)" you can inherit all the attributes from the parent class without needing to define them again
+                    <br><br><strong>^ THIS IS REQUIRED, OTHERWISE YOU WILL GET AN ERROR ! ^</strong>
+                    <br><br>If you define a method in the new class that already exists in the parent class it will override the method 
+                    <br><br>If you don't want to make changes to the methods you need to use "pass" since a class can't be empty.
+                    <br><br>You can also inherit methods from multiple parent classes and call them on the object
+                    <br><br>just use " class child-class-name(parent-classname1,parent-classname2, etc.. ) "
+                    <br><br>If you want the child class to inherit a method without overwriting it you need to add " parent-classname.method(self) " to the method
+                </p>
+
+                <h2>Objects</h2>
+                <p>
+                    Objects are an instance of a class that represents a specific realization of the class blueprint.
+                    <br><br>Each object has its own set of attributes and can use the methods defined by the class.
+                    <br><br>You create an object by assigning the class name and the attributes to a variable. 
+                    <br>" variable =  class-name(attribute1, attribute2, ...)"
+                    <br><strong>NOTICE :</strong>When the attribute is a string it needs to be within quotes !
+                    <br><br>If you want to see the attributes of an object in the terminal, you need to use " object-name.display() "
+                </p>
+
+                <h2>Modifying Objects </h2>
+                <p>
+                    You can remove remove properties of objects by using " del object-name.id "
+                    <br><br>If you want to delete the object itself you need to use " del object-name "
+                </p>
+
+                <h2>Polymorphism</h2>
+                <p>
+                    You can loop through all objects of a class, even if it's an object from specific class of that "parent" class by using a variable and applying the methods to it.
+                    <br>Example : " for z in (object1, object2, etc.): z.method1 z.method2 "
+                </p>
+
+                <h2>Special Methods</h2>
+                <h3>Iterations</h3>
+                <p>
+                    When you have an attribute that is a list which contains strings or integers you can iterate through it
+                    <br><br>1. " def __iter__(self): return self " : tells Python that your class is iterable, so it can be used for loops 
+                    <br><br>2. " def __next__(self) : self.index += 1 if self.index == len(attribute): raise StopIteration return attribute[self.index]": 
+                    <br><br>tells python how to get the next item in the sequence and when to stop the iteration
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="Exceptions">
+                <p>
+                    <a href="https://www.w3schools.com/python/python_ref_exceptions.asp">Built in Exceptions</a>
+                    <br>If you want to further explain what caused an error in your code you can use a "try:" block, within this block you put in the wrong code and then use an "exception:" block, in which you print the detailed description.
+                    <br><br>Or if you need to raise an error because your system doesn't allow the tried action (for example withdrawing more money from the bank account than the balance is.)
+                    <br><br>if you don't know what exception type you need to use just use a generic exception " except Exception as e: print("exception type:", type(e).__name__)"
+                    <br>this will print the exception type which you can then use for the print statement 
+                </p>
+
+                <h2>Raising exceptions</h2>
+                <p>
+
+                </p>
+            </article>
+
+            <hr>
+
+
+            <article id="Boolean Operators">
+                <h2>not-operator</h2>
+                <p>
+                    The not operator allows you to invert the truth value of boolean expressions & objects. 
+                    <br><br>It's unary, which means that it takes only one operand ( a boolean expression or any python object )
+                    <br><br>Python objects : integers, strings, lists, tuples, dictionaries, sets
+                    <br><br>If the operand evaluates to True, then you get False as a result & vice versa
+                    <br><br>If you want to compare ( = = ) False and " not True " it needs to be in parenthesis ( )
+                    <br><br>Now python evaluates the parenthesized expression first, not only " not "
+                    <br><br>in if statements : if " not " ( condition ) 
+                    <br><br>if statements only execute when True is returned from operator + condition 
+                    <br><br>
+                </p>
+
+                <h2>and-operator</h2>
+                <p>
+                    With the and operator you create compund Boolean expressions that checks if both conditions are True 
+                    <br><br><strong>BEST PRACTICE :</strong> is using chained operators, which means you only use one condition 
+                    <br><br><strong>NOTICE :</strong>only works this way in python, other languages would evaluate the first condition and then compare that outcome (True / False) with the other condition, which doesn't make sense 
+                    <br><br>
+                </p>
+               
+            </article>
+
+
+            <hr>
+
+            <article id="OOP">
+                <h2>Object Oriented Programming</h2>
+                <p>
+                    To be continued
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="PIP">
+                <h2>PIP</h2>
+                <p>
+                    PIP (preferred installer programm) let's you install packages in the program that aren't included in Python. 
+                    <br>You do so by writing in the terminal " pip install ' package-name'  "
+                    <br>if this doesn't work : " py -m pip install ' package-name '  "
+                    <br>It is available to all python projects since the packages get installed globally on your computer.
+                    <br>If you want to install a specific version of a package you need to add " == version number " after the package name.
+                    <br><br> If this causes an error use " pip install --force-reinstall -v "package name==version number" -> without the " "
+                    <br>Sometimes certain apps require different versions of a package.
+                    <br>with " py -m pip list " you get a list of every package that is installed on your computer.
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="virtual-environments">
+                <h2>Virtual Environments</h2>
+                <p>
+                    You create a virtual environment by typing " py -m venv '.environment-name' " in the terminal
+                    <br>After creating the environment you need to activate it :
+                    <br>" source .environment-name/Scripts/activate "
+                    <br>Linux / apple " source environment-name/bin/activate "
+                    <br>You can deactivate the environment by just typing " deactivate " in the terminal.
+                    <br>Inside the virutal environment you don't need to use " py -m " to install packages - you only need " pip install package-name "
+                    <br>Everytime you come back to your project you need to activate the environment again!
+                    <br>Get more information about packages on <a href="pypi.org">pypi.org</a>
+                    <br><br>With pip freeze > requirements.txt you can create a .txt file with all the dependencies for the project ( dependencies = requirements )
+                    <br><br>You can use the requirements.txt to install the dependencies by using 
+                    <br>" pip install -r requirements.txt"
+                    <br><br>By creating a .gitignore file within which you type " .environment-name " will ensure that the virtual environment will not be included in the Git repository when you upload a project to GitHub.
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="json">
+                <h2>JSON</h2>
+                <p>
+                    Java Script Object Notation - a data exchange format but more lightweight than XML (XML = opening and closing tags, like HTML)
+                    <br><br>With JSON you can turn an python object into a format that can be read by other languages like JS or C++
+                    <br><br> You can use JSON by importing the jason module 
+                    <br><br>with the method " dumps " you can convert a dictionary object into a string 
+                    <br><br> " string-name = json.dums( dictionary-name ) "
+                    <br><br>with the method " loads " you can convert a string into a dictionary 
+                    <br><br>" dictionary-name = json.loads( string-name )"
+                </p>
+
+            </article>
+            <hr>
+
+            <article id="Weather-App">
+                <h2>Weather App</h2>
+                <p>
+                    In order to create your own weather app the first thing you need to do is create a .env file within your virtual environment folder. ( This is the environment variable file ).
+                    <br>This is the environment variable file <strong>that also never should be uploaded to GitHub!</strong>
+                    <br>In the .env file you need to assign the API-Key you get from whatever Application (in this case OpenWeather) to " API-KEY= " .
+                    <br>What you need to do next is get the API-call link from the Application that you're using. Paste this into your python file and make necessary adjustments considering the measurements (Fahrenheit / °C / inch / m / etc.)
+                    <br>When import from dotenv doesn't work : ctrl + p > type ">python" > select interpreter > enter interpreter path > browse to path " .environment-name/Scripts/python.exe" > select this path.
+                    <br><br>In order to retreive the environment variables you need to use " load_dotenv() "
+                    <br><br>When you want to modify a request-URL everything before the " ? " can be left like it is.
+                    <br>You need to turn the link into an f-string because you're entering the API-KEY with " {os.getenv("API-KEY")} " as the " appid= ".
+                    <br><strong>NOTICE:</strong> the .env file needs to be in the same path as your python file (not inside the .venv folder)!
+                    <br>You seperate parameters with " & "
+                    <br><br>In order to get the data you need to assign " request.get(request_url).json() " to a value 
+                    <br>for example : <b>weather_data</b> = request.get(request_url).json() 
+                    <br><br>In order to print the different parameters of the json you need to use an f-string and always use the {data value["parameter x"]}
+                    <br>When the parameter is inside of an array you need to use the position of the array as well
+                    <br><br>Example : {data value["parameter x"][position of parameter y in array]["parameter y"]}
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="file-handling">
+                <h2>File Handling</h2>
+                <h2>Read</h2>
+                <p>
+                    " open("text file name") " opens the File
+                    <br> " open("text file name", "r") " reads the File
+                    <br>" rt " for reading a text file / " rb " for reading a binary file
+                    <br><br>" print(value.read()) " prints the whole content of the .txt file
+                    <br><br>" print(value.read(x)) " prints the first x characters of the .txt file
+                    <br><br>" print(value.readline()) " prints the whole line, if you use the print statement x times the first x lines will be printed.
+                    <br><br>If you want to print every line you can use " for line in value: print(line) " .
+                    <br><br>When you're finished with the file always make sure to close it with " value.close() " .
+                    <br><br>
+                </p>
+
+                <h2>Append</h2>
+                <p>
+                    Adds an input string to the file. If the file that doesn't exist is opened it creates the file.
+                    <br>With " value = open("text file name", "a") " and then " value.write("string") " you can add something to a file.
+                    <br><br>If you want the next string to be added in a new line you need to add a line break ( \n ) in the previously added string.
+                </p>
+
+                <h2>Write</h2>
+                <p>
+                    Overwrites whatever is in the file. If the file that doesn't exist is opened it creates the file.
+                    <br>In order to overwrite a file you need " value = open("text file name", "w") " and then " value.write("string") "
+                </p>
+
+                <p>
+                    You can check if a file exists with " if not os.path.exists(file name.txt) "
+                    <br>For this you need to import os
+                </p>
+
+                <h2>Create</h2>
+                <p>
+                    Creates a file, but returns an error if the file name exists.
+                    <br>You can check if a file exists with " if not os.path.exists(file name.txt) "
+                    <br>For this you need to import os
+                    <br>And then you use " value = open("file name.txt", "x") "
+                    <br><br>You can also delete a file if it exists with:
+                    <br>" if os.path.exists("file name.txt"): os.remove("file name.txt") else: print("...")
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="Flask">
+                <h2>Application with Flask</h2>
+                <p>
+                    With using Flask you can deploy your program to the web so everyone can use it, not only on your computer where the virtual environment is running.
+                    <br><br>You need to install these packages to your venv : requests / python-dotenv / Flask
+                    <br><br>Next you need to create a folder named " static ". This folder holds any static file that isn't changing (CSS, Javascript, Images, etc.)
+                    <br>Ideally you create folders for the different file types within the static folder.
+                    <br><br>Next you need to create a folder named " templates ". This is where you store your HTML files.
+                    <br>This is where you insert from python into your HTML files.
+                    <br><br><strong>Inside your HTML-file you need to link your css-file in a specific way in order for Flask to use it :</strong> 
+                    <br>" &lt; link href =" { {url_for( ' static ', filename= ' styles/styles.css' ) } } " rel= " stylesheet " / > "
+                    <br><br>Create a python file that uses the API-KEY from the application you're using in order to run your desired function. 
+                    <br><br>Next you need to create the main file for your application that runs Flask.
+                    <br>Name this file " main.py " or " server.py "
+                    <br><br>In this file you need to import from flask <strong>(needs to be lowercase!)</strong>:
+                    <ol>
+                        <li>Flask <strong>(needs to be uppercase!)</strong></li>
+                        <li>render_template</li>
+                        <li>request</li>
+                    </ol>
+                    <br> + the function from your other python file
+                    <br><br>The next step you need to take is to define your app by 
+                    <br>" app = Flask(__main__) " -> this makes the app a Flask app
+                    <br><br>In Flask you define routes, which are accessed on the web.
+                    <br>You do so by using " @app.route('destination of your HTML')" ( / or /index or /index.html access the homepage)
+                    <br>To follow these routes you need to define a function that returns something for the route.
+                    <br><strong>IMPORTANT:</strong> in order to run the app you need to define 
+                    <br>" if __name__ = "__main__" " and then " app.run(host="0.0.0.0", port=8000)".
+                    <br>This runs the app on your local host, when you want to run it on a public website you need different host & port settings.
+                    <br><br>To open your web-app you need to type "localhost:8000".
+                    <br><br>In order to deploy your app and put in in production you need to " pip install waitress ".
+                    <br>Since you've installed a new dependency you need to recreate the requirements-file.
+                    <br><br>Next step is to add the waitress dependency to your Flask App with " from waitress import serve ".
+                    <br><br>The next step is to replace the " app.run " with " serve " and add " app " in the parenthesis after it (you can keep the host & port).
+                    <br><br>Next you need to create another html-file (this one is the page after you've entered an input and used the API).
+                    <br>By changing the Title and the Headline to " {{ title }} ... " it will adjust to whatever you input.
+                    <br><br>In order to display the different parameters from the json you need to create paragraphs and within these you need to put the required parameter within two curly brackets.
+                    <br><br>Next you need to handle a route for whatever information you want to handle.
+                    <br><br>Do this by creating another route & function in your server.py.
+                    <br><br>This function needs to receive the data from your application and then you need to use " return render_template ( )"
+                    <br>In the parenthesis you need to assign the data from the application json to the dynamic values of your HTML file ( the ones within two curly brackets ).
+                </p>
+
+                <hr>
+
+                <p>
+                    When you have a problem with " not resolved " packages : go to " settings " -> search " pylance " -> scroll to " Extra Paths " -> use " add item " -> add the path of the package.
+                    <br><br> to find the path of the package : type " pip show ' package name ' " -> Location is the path you need to enter in the " add item ".
+                </p>
+
+                <hr>
+
+                <h2>Checking for errors that crash your application</h2>
+                <p>
+                    You should always check for empty strings or strings with only spaces!
+                    <br><br>with " value.strip( ) " you can strip away empty spaces within a string.
+                    <br><br>with " if not bool( input( ) ) " you check for an empty string.
+                    <br><br>In order to check if the entered value exists you can use " if not value['cod'] == 200 " and then " return value not found " & open a new website .
+                </p>
+
+            </article>
+
+
+            <hr>
+
+
+            <article id="git">
+                <h2>Git</h2>
+                <p>
+                    You initialize a Git repository by " git init " inside the folder of your project.
+                    <br><br>After initializing you need to add the new files (green) to the repository by using " git add . "  ( . means you're adding all files) 
+                    <br><br>After adding the files you need to admit them to the repository with " git commit -m "message (like first commit / updated / etc. )" "
+                    <br><br>Next you need to go to GitHub and open a new repository.
+                    <br><br>Since you've alreade created the repository inside vs code you can choose the second option " ...or push an existing repository from the command line "
+                    <br><br>Simply copy the commands, paste them into the terminal and confirm them with pressing enter.
+                </p>
+
+            </article>
+
+
+            <hr>
+
+
+            <article id="web-deployment">
+                <h2>Deployment on the web</h2>
+                <p>
+                    In order to deploy your application on the web you need to use services like render, AWS, MS Azure, etc. 
+                    For render : just connect your repository, name it, select region, seperate different build commands with two " && ", enter the start command starting with " python 3 file-name"
+                    <br>paste in your API-Key in the " Environment Variables "
+                    <br>enter your python version "PYTHON VERSION" and the version
+                    <br>you can check your version in the termin with " py --version "
+                    <br><br>After deploying you can use your link and share it.
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="rest-apis">
+                <h2>REST APIs</h2>
+                
+                <p>
+                    API = application programming interface
+                    <br>It's a webservice that provides an interface to applications to manipulate and retreive information. 
+                </p>
+                <p>
+                    Rest APIS are an HTTP service (one that you access through your browser) that can be called using standard libraries and tools.
+                    <br><br>An API can be seen as a contract (or interface) between the application offering that offers the API and other software / website.
+                    <br>They offer a service on the web where you can request information from them through HTTP endpoints ( URLs you send a request to and receive data back from).
+                    <br><br><br>In order to build a REST API you need to do these things:
+                    <ol>
+                        <p>1. create a venv</p>
+
+                        <p>2. activate the venv</p>
+
+                        <p>3. pip install Flask</p>
+
+                        <p>4. pip install flask_restful</p>
+
+                        <p>5. pip install flask_sqlalchemy (this is the ORM -> what you use to talk to your database)</p>
+
+                        <p>6. create a requirements.txt</p>
+
+                        <p>with the requirements.txt you don't need to install all the dependencies, all you need to do is :
+                        <br>type " pip install -r requirements.txt "</p>
+
+                        <p>7. if you want to create a .gitignore file in the terminal you need to use " touch .gitignore " 
+                        </p>
+
+                        <p>8. create an api.py and assign " Flask(__name__) to the value 'app' "</p>
+
+
+                        <p>9. add sql alchemy to the program that you need to create your database with</p>
+
+                        <p>" from flask_sqlalchemy import SQLAlchemy "</p>
+
+                        <p>10. " app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite : ///database.db-> where the database is going to be and what the name of the db will be</p>
+
+                        <p>11. assign a db-value " db = SQLAlchemy(app) "</p>
+
+                        <p>12. assign an api-value " api = Api(app) </p>
+
+                        <p>13. create a class ItemModel(db.Model): with different values for the columns
+                        </p>
+
+                        <p>You need to assign db.Column(db.type[Integer or String]) to the different arguments of the values </p>
+                       
+                        <p>14. create a representation</p>
+
+                        <p>" def __repr__(self): return f'item( value1 = {self.value1}, value 2 = {self.value2}, ... )</p>
+
+                        <p>15. Create a db python file</p>
+
+                        <p>from your api file import app, db
+                            <br>with app.app_context():
+                                    db.create_all()
+                            <br>with " py create_db.py " in the terminal create your database
+                        </p>
+
+                        <p>16. from flask_restful import Resource, Api, reqparse, fields, marshal_with, abort</p>
+                
+                        <p>17. item_args = reqparse.RequestParser()
+                            <br>item_args.add_argument('value', type, required=True/False, help='...')
+                        </p>
+
+                        <p>18. format the data into json-format by assigning a dictionary to a value with a key 'value':fields.Integer/String</p>
+
+                        <p>19. create a class for the specific item : class Item(Resource):
+                            <br> define get / post / patch / delete functions : def get(self): item = ItemModel.query.all() return item
+                        </p>
+
+                        <p>20. decorate the get-function with marshal_with(value) to send the json back in a serialized format</p>
+
+                        <p>21. create resources to be able to search for the classes " api.add_resources(Class,'/path')</p>
+
+                        <p>22. create an @app.route() and a function after the route
+                            <br>in the parenthesis you need to put the required html location ('/' = homepage, etc.)
+                        </p>
+
+                        <p>routes are where you request data from with your browser</p>
+
+                        <p>
+                            debug = True makes it that the server automatically restarts when you made changes
+                        </p>
+
+                        <p>23. in order to run the app : " if __name__ == '__main__': app.run(debug=True)
+                        </p>
+
+                       
+                
+                        <p>create a post request function inside the class
+                            <br>def post(self):
+                            <br> args = value_args.parse_args()
+                            <br> value = ValueModel(value1 = args ["value1"], value2 = args ["value2"])
+                            <br>db.session.add(value)
+                            <br>db.session.commit
+                            <br>value = ValueModel.query.all()
+                            <br>return users, 201
+                        </p>
+
+                        <p>If you want to add or delet specific items from your database you need to create a class and define a patch / del function.
+                        <br><br>Whenever you want to add something to the database you need to define args with reqparse.RequestParser()
+                        <br>Then add arguments to the item_args and the parameters('value',type=..., required=..., help='')
+                        </p>
+                        <p>With extensions like Thunderclient or Postman you can test your REST API
+                            <br>make a new request -> change it to GET -> http://localhost:5000/api/value -> send -> you want a Status : 200 response
+                            <br>change it to POST -> 
+                        </p>
+
+                    </ol>
+                </p>
+            </article>
+
+            <hr>
+
+            <article>
+                <h2>CRUD operators [GET / POST / ADD / DELETE] </h2>
+                <p>
+                    With a get function you receive the data from a database.
+                    <br><br>With a post function you post data to a database that you can then request with a get function.
+                    <br><br>
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="fast-apis">
+                <h2>FastAPIs</h2>
+                <p>
+                    When you create APIs in FastAPI you're defining the types of all of the data that your API is expecting - that's what makes it so fast.
+                    <br>Compared to usual APIs that you build in python, where you don't explicitly set the information that your endpoints (like a URL on the server) are going to be accepting.
+                    <br><br>An API endpoint is the touchpoint of the communication between server and API, for example the homepage of a website.
+                    <br>This results in a lot of data validation, checking what type of data (string/integer) you got, json objects etc. in order to check if they're correct and meet the requirements.
+                    <br>In FastAPIs there immediately will be an error and a message saying that the input is wrong and what input is required.
+                    <br><br>FastAPIs always return data in json format and the endpoints always receive data in json format.
+                    
+                </p>
+
+                <h2>Creating a FastAPI</h2>
+
+                <p>1. create a venv, .gitignore</p>
+                <p>2. install fastapi
+                    <br>if pip install doesn't work try : pip3 install / python -m pip install /python3 -m install
+                </p>
+                <p>3. install uvicorn</p>
+                <p>4. from fastapi import FastAPI</p>
+                <p>5. create an endpoint by setting the method that the endpoint will accept:
+                    <br> " @app.get/post/patch/delete("endpoint")
+                    <br> and define the endpoint :
+                    <br> " def endpoint-name(): return {"data": "value"} "</p>
+
+                <p>6. run the API with " uvicorn python file:app --reload</p>
+
+                <p>7. create a dictionary with different items (nested dictionary)
+                <br> dictionary = { 
+                    <br>id-number : { "key1":"value1","key2":"value2", ...}}
+                </p>
+                <p>8. set up an endpoint that can retreive the data based on the id
+                    <br>@get.app("/get-item/{item_id}")
+                    <br> def get_item(item_id:int:)
+                    <br>return[item_id]
+                    <br>You can have multiple path parameters, just define the parameter within your function, by seperating them with " , "
+                </p>
+                <h2>Path parameters</h2>
+                <p>You can import the module "Path"
+                    <br>This allows you to add details / enforcements / constraints to the path parameter by setting the type = Path(description=" ... ")
+                    <br>for example adding a description to the path parameter, in order to tell the user what information they need to pass 
+                    <br><strong>NOTICE:</strong> before you do "description" you need to set a default value for this : " None, description = " ... ""
+                    <br><br>By using constraints like " lt / gt =  " (less/greater than) or "le / ge = " (less/greater or equal) you can be more precise.
+                </p>
+                <h2>query parameters</h2>
+                <p>
+                    query parameters come after the ? in a URL
+                    <br><br>By setting the query parameter to " = None " it becomes optional.
+                    <br><br>Another way to make parameters optional is to " from typing import Optional " and put " Optional " in front of the parameter type and put the type in [ ] and = None .
+                    <br><br>When you use multiple query parameters the mandatory parameters need to come first and the optional parameters second.
+                    <br><strong>OR</strong> use " *, parameters ".
+                    <br><br>If you want to combine path & query parameters all you need to do is add the path parameter to the path inside {  } and define the parameter inside the function like all other parameters.
+                </p>
+                <h2>request body / post method</h2>
+                <p>When you want to add information to a database you don't want to do this with query & path parameters.
+                    <br><br>instead you use the request body
+                    <br>You do so by creating a route and use "post"
+                    <br>" @app.post("/...")"
+                    <br>When you want a request body, something that is not a query or path parameter, you need to set the parameter equal to a class that inherits from BaseModel.
+                    <br><br>In order to create this class you need to "from pydantic import BaseModel"
+                    <br><br>class Parameter(BaseModel):
+                    parameters : type
+                    <br>if optional : parameter : Optional[type] = None
+                    <br><br>@app.post("/path/ {path parameter}")
+                    <br>def function name(path parameter: type, parameter : class name):
+                    function
+                    <br>then : dictionary[key] = class Name
+                    <br>return dictionary[key]
+                    <br><br>If you already have items in your dictionary you need to change the inventory item to an instance of your BaseModel class or just have an empty dictionary.
+                    <br><br>for getting information from the dictionary : @app.get("/path")
+                    <br>def function(key: type)
+                    <br>for dictionary id in dictionary
+                    <br>if dictionary[id].parameter = parameter:
+                    <br>return dictionary[id]
+                </p>
+                <h2>put method</h2>
+                <p>
+                    You use put / patch for updating items in your dictionary.
+                    <br><br>You need to use a request body as well
+                    <br>for the request body you need to create a new class with all values of the keys being optional 
+                    <br><br>to change the values of each key you need the following if-statement:
+                    <br>if item.key != None:
+                    <br>dictionary[id].key = item.key
+                    <br>return dictionary[id]
+                </p>
+                <h2>delete method</h2>
+                <p>
+                    if you want to delete items from your dictionary you create a route with .delete
+                    <br><br>" @app.delete("/path") "
+                    <br>def function name(id: type = Query (..., description "..."))
+                    <br>if id in dictionary:
+                    <br>del dictionary[id]
+                </p>
+                <h2>Errors</h2>
+                <p>When you use return to create an error message the HTTP status still will show that the action was succesfull.
+                    <br><br>If you want the status to actually show an error you need to " import HTTPException from fastapi " 
+                    <br>instead of returning a manual error function use :
+                    <br>" raise HTTPException(status_code=..., detail=" error description ")
+                    <br>Status codes : 
+                    <br>404 -> 
+                    <br>400 -> 
+                </p>
+            </article>
+
+            <article id="APIs">
+                <h2>why APIs</h2>
+                <p>
+                    With using APIs you can just call the routes that interact with your databases.
+                    <br>This makes it way easier to build different applications (web / mobile / desktop) because you don't have to maintain individual code bases for each application
+                    <br>So you basically just need to change to frontend for the different application since the backend is accessed by the same routes
+                </p>
+                <p>
+                    If you have multiple endpoints like items, automations, users, etc. it's helpful to split these up into different routes.
+                    <br>This avoids having to put all the routes in a single file.
+                    <br>Especially when having a big project this is a problem because the main file will be huge and very confusing.
+                    <br><br>By using routers you can organize your main file significantly. They represent a group of endpoints.
+                    <br><br>Just create a folder named " routers " with python files for your various routers.
+                    <br><br>The first thing you need to do in your router-files is to create a router
+                    <br>" router = APIRouter(prefix = "path") "
+                    <br><br>Any endpoints that are part of this router fall under this prefix -> so this prefix is put in front of every endpoint.
+                    <br><br>You use routers in your main file by " from routers.items import router as items_router"
+                    <br>" from routers.automations import router as automations_router "
+                    <br><br>In order to use them you need to include them in the app with " app.include_router(items/automations_router) "
+
+                </p>
+            </article>
+
+            <article id="Translator">
+                <h2>Translator with GPT-4</h2>
+                <p>
+                    In the frontend the user creates a payload, consisting of the text and the required language the text is supposed to be translated in to. 
+                    <br>The text & language in JSON format are sent by the axios code ( which executes a post request ) to the FastAPI endpoint.
+                    <br><br>First you need to make sure the API knows what to to with the data that is sent.
+                    <br><br>in the schemas file we make sure that the data is validated so it lands on the API in a format that can be worked with.
+                    <br><br> The data is then sent to the database to assign it a unique ID 
+                    <br><br>The FastAPI also sends the data to the openAI API to translate it 
+                    <br><br>The open AI API returns it to the API, which then will send the translated payload also to the database. 
+                </p>
+                <h2>Frontend</h2>
+                <p>
+                    In order to start a function by clicking a button you need to use an onclick-event 
+                    <br>" onclick="function-name() "
+                    <br>these are javascript functions which need to be defined within a script inside the body of your HTML file.
+                </p>
+                <p>
+                    defining the function : 
+                    <br>async function function-name() { 
+                        <br>const text = document.getElementById( ' text from the HTML element that needs to be processed ' ).value }
+                    <br><br> const text = giving the function a text variable 
+                    <br>the function will grab the text from an HTML element and store it a text variable
+                </p>
+
+                <h2>Backend</h2>
+
+                <h3>Setting up the database</h3>
+                <p>
+                    1. create a database.py
+                    2. create a models.py
+                    3. create a crud.py
+                    4. create a schemas.py
+                </p>
+                <p>
+                    First you need to set up the schemas in your schemas file, which will validate that the input data is in the right format in order to be processed.
+                    <br><br>You have to create BaseModel classes for each schema in order to add data to a database.
+                </p>
+                <p>
+                    The next step is to create the crud methods that will add the task (the text that needs to be translated & the language it's going to be translated in) and updates the task once it has been translated.
+                </p>
+                <p>
+                    Next you need to set up the database and create the table.
+                    <br><br>For this you need to import os, from sqlalchemy import create_engine, from sqlalchemy.orm import sessionmaker, from dotenv import load_dotenv
+                    <br><br>inside your .env file you have your sensitive data like DATABASE_URL & API_KEY.
+                    <br><br>You need to load_dotenv().
+                    <br><br>create a get_db function: def get_db():
+                    <br>db = SessionLocal()
+                    <br>try:
+                    <br>yield db
+                    <br>finally:
+                    <br>db.close()
+                    <br><br>SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
+                    <br><br>engine = create_engine(SQLALCHEMY_DATABASE_URL)
+                    <br><br>SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+                </p>
+                <p>
+                    Next you need to define the table in the models file.
+                    <br><br> from sqlalchemy import Column, Integer, String, Text, JSON
+                    <br><br> from sqlalchemy.ext.declarative import declarative_base
+                    <br><br>Base = declarative_base()
+                    <br><br>Create a Base class with all the columns that are necessary.
+                    <br>Set the attributes (id/status/...) = Column-function(parameters) 
+                </p>
+                <p>
+                    
+                </p>
+            </article>
+
+        
+            <article id="PG Admin4">
+                <h2>PG Admin 4</h2>
+                <p>
+                    To create a new database right click " Servers " in the menu on the left -> " Register " -> " Server "
+                    <br><br>Enter a name for the server
+                    <br><br>Enter the Host name/adress of your database & your postgres password
+                    <br><br>"Databases" -> "Schemas" -> Tables
+                    <br>In " Tables " you create a table with the class in your models file
+                    <br><br>in order to connect your database to the specific project you need to set up the DATABASE_URL inside your .env file :
+                    <br><br>" DATABASE_URL=postgresql://username:password@localhost:5432/database name "
+                    <br>postgresql = what SQL (in case you don't use postgresql)
+                    <br><br>pip install psycopg2-binary -> if message : failed building wheel : 
+                    <br>pip list --outdated
+                    <br>pip install -U wheel
+                    <br>pip install -U setuptools
+                    <br>(maybe you need to install / update Visual Studio BI as well)
+                    <br>pip install psycopg2-binary
+                    <br><br>When you launch your server with uvicorn it will automatically create the database
+                </p>
+                <p>
+                 
+                </p>
+            </article>
+
+            <article id="PostgreSQL">
+                <h2>PostgreSQL</h2>
+                <p>
+                    
+                </p>
+            </article>
+
+            <hr>
+
+            <article id="debugging">
+                <h2>Debugging</h2>
+                <p>
+
+                </p>
+
+            </article>
+        </main>
+        <footer>
+
+        </footer>
+        
+    </body>
+
+</html>

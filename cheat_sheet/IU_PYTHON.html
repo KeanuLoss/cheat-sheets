@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keanus Python Journey</title>
+        <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+
+    <header>
+        <h1>IU Introduction to Python</h1>
+
+        <div class="references">
+            <a href="Khan_computer_science_fundamentals.html">Khan computer science cheat sheet</a>
+            <br><a href="oLLama_cheat_sheet.html">oLLama cheat sheet</a>
+            <br><a href="HTML_cheat_sheet.html">HTML cheat sheet</a>
+            <br><a href="IU_OOP_PYTHON.html">IU Object Oriented Programming</a>
+        </div>
+
+    </header>
+
+    <hr>
+
+    <main>
+        <article id="Why Python">
+            <h2>Why Python?</h2>
+            <p>
+                <ul>
+                    <li>python is free, libraries are availabe at no cost</li>
+                    <li>syntax is concise compared to other languages -> you can do more with less -> reducing the demand on the programmer</li>
+                    <li>easier to read because a central concept in the creation of Python was that the code shoukd resemble everyday English</li>
+                    <li>active developer community</li>
+                    <li>applications can be build using procedural, object oriented or function paradigms</li>
+                    <li>interpreted language -> developers get immediate feedback without having to wait for an application to compile</li>
+                    
+                </ul>
+            </p>
+
+            <h2>Why Python for professional & scientific development?</h2>
+            <p>
+                <ul>
+                    <li>robust & powerful despite being easy to read</li>
+                    <li>easy to use & concise language -> popular choice for quickly building working prototypes</li>
+                    <li>Python is the language for data science and heavily used when working with artificial intelligence</li>
+                    <li>because of the popularity in data science / artificial intelligence there is a huge ecosystem of libraries for areas such as mathematics, statistics, machine & deep learning</li>
+                    <li>exceptional libraries and frameworks that facilitate web development in Python</li>
+                   
+                </ul>
+            </p>
+        </article>
+
+        <article id="anaconda">
+            <h2>Anaconda</h2>
+            <p>
+                It's one of the most popular distributions of Python for data science and machine learning.
+                <br><br>It includes crucial tools like:
+                <br>NumPy : library used for the computation of large data sets and multidimensional arrays
+                <br>SciPy : library used for scientific computing including linear algebra, interpolation and signal / image processing 
+                <br>Pandas : library for data manipulation in numerical tables and time series data 
+            </p>
+
+            <h2>Python Interpreter</h2>
+            <p>
+                First you need to start the Python interpeter -> type " Python " to invoke the interpreter 
+                <br><br>With the Python interpreter running in the anaconda prompt you can type code at the prompt and the interpreter will execute it and display the results
+            </p>
+
+            <h2>Compiled / Interpreted languages</h2>
+            <p>
+                Some programming languages use a compiler.
+                <br><br>The code is sent to the compiler, which translates the entire program into code that is compatible with the target or host machine 
+                <br><br>the target machine executes the code and returns the output
+                <br><br><br><strong>Interpreted languages</strong> load an interpreter and return the output without creating executable machine code as an independent artifact
+                <br><br>The interpreter reads the code (checks if it is reading a valid Python command), translates the code into byte code and then executes it in a Python virtual machine which returns the output 
+            </p>
+
+            <h2>IPython and Jupyter</h2>
+            <p>
+                IPython extends the Python terminal into an interactive shell environment 
+                <br><br>it provides support within the terminal for commands, command history and auto-completion of python commands
+                <br><br>key features of IPython :
+                <ul>
+                    <li>Python script debugging</li>
+                    <li>ability to access help by typing a question mark next to commands or object names in the code </li>
+                    <li>enhanced feedback from the terminal with indicators for input and output line numbers</li>
+                    <li>tab completion in the command line to finish partially typed commads</li>
+                </ul>
+                <br><br>IPython notebook : allows developers to combine rhich-formatted text, incline code, mathematical formulas, plots and graphs and other media into a single document
+            </p>
+
+            <h2>Jupyter Notebook</h2>
+            <p>
+                You can create a jupyter notebook by typing " jupyter notebook " in the terminal
+                <br><br>a directory listing will open, where you can create a new Python Jupyter notebook 
+                <br><br>in these notebooks you can create documents mixing text and code in the same document 
+                <br><br>You add content in sections called "cells" and for each cell you select the type of content 
+                <br><br><strong>Markdown</strong> let's you use syntax to format text in a variety of ways
+                <br><br>you create headers by prefacing the text with hastags -> one hashtag = level 1 header , two hashtags = level 2 header , ...
+                <br><strong>make sure to put a space after the hashtag</strong>
+                <br><br>to make text bold you need to surround it by double asterisks ( * * )
+                <br><br>to create a hyperlink : put the title of the link in brackets followed by the link itself in parentheses 
+                <br>example : [title](link)
+                <br><br>You can run a code-cell which will execute whatever is in that cell
+                <br><br>Jupyter auto-saves the content as long as you're not in the middle of a cell edit
+            </p>
+
+            <h2>Jupyter Lab</h2>
+            <p>
+                Jupyter Lab is an integrated development environment meant to facilitate robust development of large projects in Python. 
+                <br><br>
+            </p>
+        </article>
+
+        <article id="variables-and-data-types">
+            <h2>Variables and Value Assignment</h2>
+            <p>
+                Forcing an application to always output a given value for something is called hard-coding -> if you need to change that value you need to change it in every line of code that used it
+                <br><br>using variables solves this problem by storing data that only needs to be edited once
+                <br><br>you can't create a variable for reserved words (print / class / def / etc. )
+                <br>variables must start with a letter or an underscore " _ "
+                <br>after the first character, variable names can consist only of letters, numbers or underscores 
+                <br><br>syntax refers to the set of rules used to create code -> syntax error means your code broke the rules 
+                <br><br>the console keeps your code in memory throughout the session, values remain the same unless you update them
+                <br><br>there are coding standards to consider in addition to the naming rules:
+                <br>in order to increase readability throughout the world
+                <br><br>variables should be lowercase with words seperated by underscores
+                <br><br><strong> You need to follow the Python syntax rules in order to write valid code and you should follow the Python style guide convention to write conventional, readable code </strong>
+                <br><br><strong>be aware that that the computer will do exactly what you tell it to do, nothing more and nothing less</strong>
+                <br><br>Example " player_weight = 73 "
+                <br>The interpreter creates a variable named " player_weight " and assigns it the value 73 
+                <br>the equal sign ( = ) is called an assignment operator, it works from right to left ( assigns the whats on the right side to whats on the left side)
+                <br><br>You can't assign something to a " literal " all numbers are literals 
+                <br><br>the interpreter will do calculations on the right side of the equal operator and then assign it to the <strong>one thing on the left side</strong>
+                <br><br>you are not restricted to using literals on the right-hand side of the assignment operator -> you can even have a combination of variables and literals on the right-hand side 
+                <br>example : player_weight = another_player_weight + 10 - 3 
+                <br><br>
+            </p>
+        </article>
+
+            <hr>
+
+        <article id="numbers">
+            <h2>Numbers</h2>
+            <p>
+                <h3>Integers</h3>
+                numerical values are called integers ( int )
+                <br><br>integers can be positive, negative or 0 
+                <br><br>the int data type has unlimited size
+
+                <h3>Floating point numbers </h3>
+                <br><br>To use decimal number you need to use floating-point numbers ( float )
+                <br><br>you can also use the letter e or E to designate scientiefic notation in float values 
+                <br><br>the number after the e or E indicates the number of times to multiply the value by 10 or -10
+                <br>example : 4.5 e 7 is the same as 4.5 * 10 ^ 7 
+                
+                <h3>Imaginary numbers</h3>
+                <br><br>You can represent imaginary numbers by using a data type called complex 
+                <br>they have the form of a + bJ , where both a and b are floating point numbers and J is the square root of -1 -> the imaginary portion of the number 
+                <br><br>
+                
+                <h3>Hexadecimal and octal values</h3>
+                You can represent Hexadecimals by the notation 0x&lt;hex> where &lt;hex> is the hexadecimal number you want to use
+                <br><br>Octal numbers are represented by 0o&lt;octal> 
+
+                <h3>Typical arithmetic symbols</h3>
+                You can use + , - , / , and * 
+                <br><br>you can mix integers and floating point numbers, the result will by be a floating point number
+                <br><br> if you want just want to keep the integer part, you need to convert in into an integer like this " int ( int * float)"
+                <br><br>If you want to keep the remainder of a division you need to use the mod operator ( % )
+            </p>
+        </article>
+
+        <hr>
+
+        <article id="strings">
+            <h2>Strings</h2>
+            <p>
+                Text is stored in string data type ( str )
+                <br><br>strings represent a series of characters, including letters, numbers, punctuation marks and spaces
+                <br><br><strong>Strings are always in quotes " " or single quotes ' ' </strong>
+                <br><br>strings are immutable, which means you cannot change the string that a variable contains 
+                <br><br>certain characters can't be typed into a string:
+                <br>If you need quotation marks inside your string they would end the string -> you need to use an " escape character, a back slash " \ "
+                <br><br>the combination of the escape character with the quotation mark is called an escape sequence 
+                <br><br>if you need a backslash in a string you need to use <strong>two</strong> back slashes 
+                <br><br>if you want to create a new line you need to use a new line character " \ n "
+                <br>this will place the cursor / following text in a new line
+                <br><br>if you want to use a tab-character you need to use " \ t "
+                <br><br>if you want to return the cursor to the beginning of the line and overwrite the string you need to use a carriage return character use " \ r "
+                <br><br>You can ignore the escape character by using a raw string that starts with an " r " before the quotation mark 
+                <br><br>the string that follows will ignore any escape sequences
+                <br><br>if you want to denote text that you want to span multiple lines without using new line characters you can use triple quotes 
+            </p>
+
+            <h2>String Operations</h2>
+            <p>
+                len("string") -> get the length (amount of characters) of the string 
+                <br><br>" variable.index( " character " ) -> get the index / position of that character 
+                <br><br>" variable.count( " character " ) " -> count the number of matching characters in the string 
+                <br><br>" variable.lower ( ) " -> convert all characters to lowercase 
+                <br><br>" variable.upper ( ) " -> convert all characters to uppercase 
+                <br><br>if you want to replicate the same string a given number of times use " * " and the amount of repititions 
+                <br><br>with " ( string ).join ( string ) " you can specify a string to be inserted between every letter of another string
+                <br><strong>the first string will be inserted into the second string</strong>
+                <br><br>with " string.split ( " " ) " you can split a string into multiple strings seperated by spaces 
+                <br> .split ( " , / - / . / _ / etc. " ) splits seperated by comma / hyphen / point / underscore / etc. 
+                <br><br>with " string.replace (part of the string, new string) " you replace a part of the string with another character or substring 
+
+                <h3>Concatenating strings</h3>
+                <br><br>You can concatenate two strings by just using the addition symbol " + " between the two strings 
+                <br><strong>Make sure to add a space after each string, otherwise there won't be spaces within in the concatenated string</strong>
+                <br><br>you can concatenate strings through the format function :
+                <br><br> embed temporary variables within a string by surrounding them with curly brackets { } and then using the format function 
+                <br><br> in the format function you specify the values for those variables 
+                <br><br>the format function accepts literals or variables as values 
+                <br>example : " string = ' My name is {name} and I'm {age} years old. ' .format(name = "Keanu", age = age_variable) "
+
+                <h3>Substrings</h3>
+                you can retrieve parts of a string by using brackets after the string
+                <br><br>the first parameter is the index where you start retrieving the substring
+                <br><br> the second parameter is the ending index 
+                <br><br> the third parameter defines the size of the steps (return every xth character)
+                <br>example : " print(string[3::1]) " will print every character of the string starting from the 4th character 
+                <br><br>When you don't define an end it will return the rest of the string 
+                
+            </p>
+
+        </article>
+
+        <hr>
+
+        <article id="collections">
+            <h2>Collections</h2>
+            <h3>Sets</h3>
+            <p>
+                A set is a structure that will hold data in an unsorted manner
+                <br><br>You create a set by setting a variable equal to curly braces 
+                <br><br>the items in a set can be strings or any kind of numbers 
+                <br><br>sets don't allow duplicates, you don't get an error by adding an element that already exists, but it will not be added again 
+            </p>
+
+                <h3>Set methods</h3>
+
+            <p>
+                " set-name.add ( element ) " adds an element to the set
+                <br>You can only add 1 element at a time 
+                <br><br>" set-name.remove ( element ) " removes an element from the set
+                <br><br>" set-name.clear ( ) " removes all elements from the set 
+                <br><br>If you want to create a set that is immutable you need to use " frozenset ( { set } ) "
+            </p>
+
+            <h3>Lists</h3>
+            lists allow duplicate elements within the list 
+            <br><br>lists are ordered -> each element occupies a specific place in the list 
+            <br><br>lists are created using square brackets " [ ] "
+            
+
+            <h3>List methods</h3>
+            " list-name.append( element ) " appends an element to the end of the list 
+            <br><br>" list-name.insert( index, element ) " inserts an element at given index 
+            <br><br>" list-name.remove ( element ) " removes an element from the List
+            <br><br>" list-name.clear ( ) " removes all elements from the list 
+            <br><br>" list-name.count ( element ) " returns the number of times a particular element appears in the list 
+
+            <h3>Why lists or sets?</h3>
+            Sets are more effective and faster at identifying wether or not an item is found in the set 
+            <br><br>Lists are faster at looping through to view or manipulate each item in the list 
+            <br><br>Choosing the right collection can have a big impact on the speed of your application 
+
+            <h3>Tuples</h3>
+            If you want to have an immutable list you need to create a tuple by using parentheses " ( element1, element2, ... ) "
+
+            <h3>Dictionaries</h3>
+            dictionaries are unordered and mutable, where each element consists of a key and a value 
+            <br><br>you create a dictionary by using curly brackets and seperating the key and the value with a colon ( : ) and seperating key-value pairs with a comma 
+            <br><br>There are 2 ways to check the value of a key :
+            <br>1. use  " dictionary-name[ " key " ] "
+            <br>2. use the " get " - method : dictionary-name.get( key )
+        </article>
+
+        <hr>
+
+        <article id="files">
+            <h2>Files</h2>
+            <p>
+                It's important to save data to the hard disk or other permanent storage so you can retrieve that document later.
+                <br><br>That's why saving data to files and retrieving that data is a crucial part in most applications. 
+                
+                <br><br>
+
+
+
+                <h3>File options</h3>
+                " x " = create -> will create a new file with the specified file name, if the file already exists, you will get an error message
+                <br><br> " r " = read -> opens a file for reading
+                <br><br> " a " = append ->  will create a new file if it doesn't exist yet
+                <br>if the file already exists, it will open the file and append the contents to the end of the file 
+                <br><br> " w " = write -> will create a new file if it doesn't exist yet 
+                <br>if the file already exists, it will erase all contents of the existing file and start writing at the beginning of the file 
+
+                <h3>Writing to a file</h3>
+                In order to write data to a file you first have to open that file 
+                <br><br>You open a file by using the " open " - method, specifying a filename and an option, depending on what you want to do with that file 
+                <br>example : variable = open ( "file-name" , " option " )
+                <br><br>The open method returns a file object / variable that you need in order to write to the file 
+                <br>so you need to assign the value from the open method to a variable 
+                <br><br>Once the file is open you can start writing using the " .write "-method. 
+                <br>example : " file-name.write( " Content you're writing " ) "
+                <br><br>when you're done writing always make sure to close the file with " file-name.close( ) "
+                <br><br>When you can't write to a file it's because it is " file locked "
+                <br><br>Developers use a " file lock " to prevent multiple applications to write to the same file at the same time 
+
+                <h3>Reading from a file</h3>
+                In order to read from a file you first have to open it and use the read-option. 
+                <br> variable = open( "file-name", " r " )
+                <br><br>To read the contents of the file use the read-method and make sure to close the file after you're done reading it. 
+                <br> " print(variable.read ( ) ) "
+
+                <h3>a better way to open files: (not part of the script)</h3>
+                use " with open("file-name.format", "option") as file-variable " you can open a file that is automatically closed
+                <br><br>to write to the file then use " variable.write("contents") "
+                <br><br>to read the file then use " variable for the content = file-variable.read( ) "
+                <br>you can then print the content-variable " print( content-variable ) "
+            </p>
+
+        </article>
+
+        <hr>
+
+        <article id="statements">
+
+            <h2>Assignment operators</h2>
+            <ul>
+                <li>" = " assigns the value on the right to the variable on the left</li>
+                <li>" += " takes the value currently stored in a variable, adds the value on the right to it and assigns the value back to the variable </li>
+                <li>" -= " takes the value currently stored in a variable, subtracts the value on the right from it and assigns the value back to the variable</li>
+                <li>" *= " takes the value currently stored in a variable, multiplies it by the value and assigns the new value back to the variable  </li>
+                <li>" /= " takes the value currently stored in a variable, divides it by the value and assigns the value back to the variable </li>
+                <li>" %= " takes the value currently stored in a variable, computes the modulus of it and the value on the right and assigns the new value back to the variable</li>
+                <li>" **= " takes the value currently stored in a variable, raises it to the power of the value on the right and assigns the new value back to the variable </li>
+            </ul>
+
+            The operations follow mathematical orders when calculating the value of an expression. 
+            <br><br>
+            <h3>Chained Assignment</h3>
+            <p>
+                a chained assignment is assigning the same value to multiple variables
+                <br><br>you use the assignment operator between every variable ( a = b = c = 5 ) <strong>notice :</strong> only a single variable between each operator is allowed
+                <br><br>
+            </p>
+
+            <h2>Input function</h2>
+            <p>
+                You can get the input from a user and store it in a variable 
+                <br><br>in order for this you need to use " variable = input ( ) "
+                <br><br>you can Type a string within the parentheses, this will be printed and clarifies what the user is supposed to enter
+                <br><br>with " type ( variable ) " you can check the type of your variable 
+                <br><br>the input always is read as a string and therefore by default the type : string 
+                <br><br>if the "string" is actually a number you can convert it with " int(string) " / " float (string) " 
+                <br><br>
+            </p>
+
+            <h2>Conditional statements</h2>
+
+            You often need your program to execute a section of code based on condition A and another section based on condition B. 
+
+            <h2>IF Statements</h2>
+            <p>
+                When you ask the user for an integer input and want to compare it with another integer inside the if statement
+                <br> <strong>MAKE SURE TO CONVERT THE VARIABLE INTO AN INTEGER : " int ( variable ) "</strong>
+                <br><br>This can be done with if statements, which evaluates an expression  
+                <br><br>if the expression evaluates to True, the following code will be executed
+                <br><br>if the expression evaluates to False, the following code will be skipped 
+                <br><br><strong>a statement is a line of code that the interpreter can execute</strong>
+                <br><br>an expression is a section of code that the interpreter evaluates to a certain value 
+                <br><br>a boolean expression is one that evaluates to either True oder False 
+                <br><br>in order to facililate boolean expression you use <strong>comparison operators</strong> 
+            </p>
+          
+
+            <h3>comparison operators</h3>
+            <ul>
+                <li>" == " checks if the left & right side are equal </li>
+                <li>" != " checks if the left & right side are not equal </li>
+                <li>" > " checks if the the left side is greater than the right side </li>
+                <li>" >= " checks if the the left side is greater than or equal to the right side </li>
+                <li>" &lt; " checks if the left side is less than the right side </li>
+                <li>" &lt;= " checks if the left side is less than or equal the right side </li>
+            </ul>
+            The interpreter always returns either " True " or " False "
+            <br>these values are the data type " bool "
+
+            <h2>Else Statements</h2>
+            You use else statements in order to execute code when the expression evaluates to " False "
+            <br><br>you can't use an else statement without an if statement 
+            <br><br>else statements are optional, but you should use them in order to provide information to the user
+
+            <h2>Elif Statements</h2>
+            <p>
+                elif statements let you add an additional conditional expression to be evaluated
+                <br><br>They are needed when you want to execute code based on more than just a True/False evaluation - when you have more than two possible blocks of code 
+                <br>example : is the input negative, 0 or positive 
+                <br><br>
+            </p>
+
+           
+        </article>
+
+        <article id="loops">
+            <h2>Loops</h2>
+            <p>
+                often times you need to loop over a certain set of values or range of numbers multiple times in order to accomplish the task 
+            
+                <h3>Range function</h3>
+                the range function creates a range of numbers based on a set of parameters : 
+                <br><br>1. start (optional) -> tells the range function at which number to start
+                <br>its optional, if you omit this parameter the starting point is 0
+                <br><br>2. stop (required) -> tells the range function at which number you want to stop <strong>NOTICE : this number will not be included </strong>
+                <br><br>3. step (optional) -> tells the range function how many numbers to skip between each number in the set
+                <br><br>the parameters are seperated by commas 
+                <br>example : " for variable in range(2,10,1) "
+                <br>this can be used to iterate through lists by iterating through the indexes
+                
+                <h3>While loops</h3>
+                While loops execute a code until the expression evaluates to False 
+                <br><br>in order for this to work you first need to assign a value to a variable 
+                <br><br> and then use " while variable == / > / &lt; / any value : "
+                <br><br>You also <strong>need to count the value up / or down with " variable += / -= step size</strong>
+
+                <h3>loop keywords</h3>
+                " break " forces the loop to exit regardless of the expression being evaluated to execute the loop
+                <br><br>" continue " interrupts the current loop instead of exiting it -> the interpreter skips the current execution and returns to the top of the loop 
+
+                <h3>Iterators</h3>
+                You can use iterators to loop through lists, tuples and dictionaries 
+                <br><br>all you have to do is to encapsulate the variable of your list / tuple / dictionary in the parameter of the " iter "-function 
+                <br>example : iterator-name = iter ( list-name )
+                <br><br>the iter-function returns an interator object 
+                <br><br>You can loop through the list by calling the next-function and passing it the name of the iterator 
+                <br>example : next ( iterator-name )
+                <br><br>every next-funtion is one step 
+                <br><br>When you iterate beyond the bounds of a list / tuple / dictionary you get a StopIteration error 
+                <br><br>By combining an iterator with a for loop you can avoid the StopIteration error -> you loop through a range of with the iterator instead of using the range function 
+                <br>example : " for x in iterator-name: "
+                <br><br><strong>BUT it is faster</strong> to just iterate through your list using " for x in list-name ", since you don't have to create an iterator first - this happens automatically
+            </p>
+        </article>
+
+        <hr>
+
+        <article id="Comprehensions">
+            <h2>Comprehensions</h2>
+            <p>
+                Comprehensions let you create a new list by using values from an existing list, greatly simplifying your code. 
+                <br><br>You do so by putting an expression and a for loop inside a new List
+                <br>example : " new_list = [ n*n for n in old_list ] "
+            </p>
+        </article>
+
+        <h2>Summary</h2>
+        <p>
+            An expression evaluates to a value while statements perform some function. 
+            <br><br> A line of code that uses the assignment operator is a Python statement that will assign the value of an expression
+            <br><br>Conditional expressions use operators to compare values and they are used in conditional statements ( if / elif / else ) to execute different sections of code 
+        </p>
+
+        <article id="functions">
+            
+            <h2>Function Declaration</h2>
+            <p>
+                Sets of actions that are the same or similar grouped into routines are called functions. 
+                <br><br>They help to organize code by seperating it from the main block of the program. 
+                <br><br>and it decreases the potential risk for mistakes, resulting in errors 
+                <br><br>
+            </p>
+
+            <h2>Functions</h2>
+            <p>
+                a function is a block of code that you've given a name to 
+                <br><br>when you use a function name in a program, execution of the code jumps to that function block, executes the function and then returns to the point where the function name was called 
+                <br><br>Whatever is inside the function will only be executed once the function is called 
+                <br><br>1. you always need to use the keyword " def " in order to create a function
+                <br><br>2. give the function a name and add parentheses after the name 
+            </p>
+
+            <h2>Scope</h2>
+            <p>
+                Scope is the sections within code for which a variable or function is defined and executable for the interpreter
+                <br><br>Scope refers to the definition of variables or functions in Python.
+                <br><br>A variable / function is out of scope when it is used / called before it has been assigned / defined 
+                <br><br><strong>variables defined within functions only have scope within the function they were assigned in </strong>
+                <br><br>when you define a function within another function ( nested function ), the nested function only has a scope of its partent function
+                <br>so it can only be called from inside the parent function, not globally 
+
+                <h3>global variables</h3>
+                by using " global variable-name " within a function, you can use the global variable instead of creating a new local version
+                <br><br>by using " nonlocal " in a nested function you tell the interpreter that you don't want to create a local variable and instead want to use that variable in the parent function 
+
+        
+                <h2>Arguments</h2>
+                <p>
+                    Functions can receive data from the calling program through parameters
+                    <br><br>The values that are passed into the function are called arguments 
+                    <br><br>the parameters are defined inside the parentheses in the function definition 
+                    <br><br>a function can have zero parameters or as many as you need 
+                    <br><br>when calling a function that has parameters, you put the arguments in the parenthesis 
+                    <br><br>You can give parameters default values in the function definition -> if no argument is provided for the parameter the default will be used 
+                    <br><br>the order you pass arguments to the function is the order those arguments are assigned to the parameters 
+                    <br><br>when you call the arguments specifically by name inside the function call you can specify them in any order you want. 
+                    <br>example : function-name( paramer1 = argument, parameter2 = argument, ... )
+                    <br><br>you can specify default values, when no argument is passed the dafault value is used 
+                    <br><br>if an argument is passed, the default will be overwritten 
+                    <br>example : " def function-name (parameter1, parameter 2 = ... , parameter 3 = ... )"
+                    <br><br><strong>NOTICE : </strong> all default arguments need to be on the right hand side of the parenthesis -> there can't be a not default argument be between default arguments 
+                    <br><br>
+                    </p>
+
+                <h3>Return values</h3>
+                <p>
+                    You can also get values back from a function 
+                    <br><br>by using the " return " keyword followed by a variable or set of variables 
+                    <br><br><strong>the return statement will exit your function, make sure to not have code that you want to run after your return statement</strong>
+                    <br><br>returned will be the value of those variables
+                    <br><br>when multiple values are returned, they are returned as a tuple within parentheses 
+                    <br><br>to unpack this tuple you need to specify each variable on the left-hand side of the assignment 
+                </p>
+        </article>
+
+        <hr>
+
+        <article id="errors">
+            <h2>Errors</h2>
+            <h2>Syntax Errors</h2>
+            <p>
+                Syntax errors occur when code does not conform to syntax rules 
+                <br><br>the first line of an error message is critically important -> tells the exact line of your code in which the error occurred 
+                <br><br>the second line shows the line of code in question
+                <br><br>
+            </p>
+
+            <h2>Exception Handling</h2>
+            <p>
+                sometimes code that conforms to Python programming rules and that does not cause a syntax error still breaks during execution 
+                <br><br>exceptions occur when code is properly formed syntactically but an error occurs that causes the program to terminate
+                <br><br>an exception will cause the application to crash and cease execution
+                <br><br> ZeroDivisionErro = program tried to divide by zero 
+                <br><br>FileNotFoundError = file that was tried to be opened, read or written can't be found 
+                <br><br>If you ever come across an error that you don't understand, you can simply search for that error on the internet
+            </p>
+
+            <h2>Avoiding exceptions</h2>
+            <p>
+                The trick is to anticipate where exceptions can possibly happen and code in a way that will not make your application crash 
+                <br><br>1. use the " try " - statement preceding any block of code in which we think an exception may occur 
+                <br>example : " try : indented block of code"
+                <br><br>any code in the indented block that follows the try statement will be set up for the proper handling of exceptions 
+                <br><br>2. use the " except " clause after the try block of code followed by a type of error  
+                <br>example : " except ZeroDivisionError / any other possible error "
+                <br>you don't need to specify the error type and can just use " except : "
+                <br><br>if the specified error occurs, the program will jump to the except block instead of crashing 
+                <br><br>the indented code after the except clause will be executed, which should be an explanation what went wrong and what input should be put in 
+                <br><br>either way (if the try block was succesfully executed or the exception block was executed) the program will resume normal operation 
+                <br><br>it's good to use a " finally "-clause in order to run a block of code regardless of errors to release resources / clean up temporary data / release locks / ensure user notification 
+                <br><br>even when an exception is raised the finally block will still be executed
+                <br><br>you can raise errors with " raise " + any error 
+            </p>
+
+
+            <h2>Logs</h2>
+            <p>
+                Logical errors are most difficult to find because the interpreter doesn't point to the likely location of the error 
+                <br><br>You need to compare the obtained results to the expected results to make sure the program is doing what you intended it to do 
+                <br><br>the process of identifying and fixing logical errors is called debugging 
+                <br><br>logging / writing data to log files is a tool for debugging 
+                <br><br>you have to import the library " logging " 
+                <br><br>this lets you write code using Pythons built in logging features 
+                <br><br>logging in Python has five different levels of severity in terms of which information is being logged 
+                <br><br>in order from lowest to highest severity : 
+                <br>1. debug 
+                <br>2. info 
+                <br>3. warning
+                <br>4. error
+                <br>5. critical 
+                <br><br>you can log messages through one of those severity levels 
+                <br><br>you can set a severity level for your program so that during execution, only the severity levels equal to or higher than will be logged 
+                <br><br>with " logging.basicConfig ( ) " you can change the level of log outputs as well as write logs to files
+                <br>with " logging.basicConfig ( level = logging.SEVERITY-LEVEL ) " you can change the severity level 
+                <br><br>with " logging.basicConfig (filename = "mylog.log", filemode = "w", level = logging.SEVERITY-LEVEL ) you can write the logs to a file
+                <br><br>you can customize your log messages in order to get more detailed info on what is going on in your program by using the format-string
+                <br>by using " logging.basicConfig ( format = "%( attribute )s: %(message)s " ) "
+                <br><br>here is a list of attributes to pull different data in your logs:
+                <br>1. " %(asctime)s " - gets the log entry creation date and time 
+                <br>2. " %(filename)s " - gets the name of the file 
+                <br>3. " %(funcName)s " - gets the name of the function in which the log entry was created 
+                <br>4. " %(lineno)d " - gets the line of code where the log entry was created 
+                <br>5. " %(process)d " - gets the process ID that created the log entry 
+                <br>6. " %(processName)s " - gets the process name that created the log entry 
+                <br><br>
+            </p>
+        </article>
+
+        <hr>
+
+        <article id="modules&packages">
+            <h2>Usage of libraries</h2>
+            <p>
+                Importing libraries lets you use code only visible to your program, enabling you to use multiple functions without making your code confusing 
+                <br><br>you can create your own modules, simply by defining functions and importing them from the file in another application 
+                <br><br>it's like you have defined the function in your code in order to run it 
+            </p>
+
+            <h3>Namespaces</h3>
+            <p>
+                a namespace represents a way of otlining categories of names to reduce name reuse and overwriting
+                <br><br>Python namespaces include :
+                <br><br>built-in namespaces : contains all built in functions and exception
+                <br><br>global namespace : contains all the names of variables and functions you create in your program that exist outside of functions 
+                <br><br>local namespace : contains only names within a given function
+                <br><br> namespaces provide you with different levels of names and variables 
+                <br><br>when importing an entire libray, the names for variables and functions in the library are accessed with dot notations 
+                <br><br>dot notations eliminate conflict with a library function of the same name 
+            </p>
+
+            <h2>Documentation</h2>
+            <p>
+                Readability is crucial in any program for improving maintainability and reducing the time needed to track down bugs or add enhancements 
+                <br><br>you can improve readability by commenting your code, what the general use is and what is done exactly 
+                <br><br>you add coments by using " # "
+                <br><br>you can also use docstrings ( """ ) // SHIFT + ALT + A to add comments
+                <br><br>they are displayed in the help when using the help function on a function
+                <br><br>this is especially important when you've imported functions from a module / library and don't exactly know what they do / use to be executed 
+                <br><br>
+            </p>
+
+            <h2>NumPy</h2>
+            <p>
+                one of the most important libraries for data science 
+                <br><br>provides a variate of data types and functions for use in computations with arrays 
+                <br><br>NumPy provides developers with the following  : 
+                <br><br>1. built-in, robust data types for storing and working with data sets more efficient than Pythons built-in lists 
+                <br><br>2. improves speed over standard Python when manipulating large amounts of data 
+                <br><br>3. wide range of built-in functions for dealing with statistical analysis on large data sets 
+            </p>
+
+            <h2>Matplotlib</h2>
+            <p>
+                a library that provides a wide range of flexible, customizable and easy-to-use plotting functions for displaying data 
+                <br><br>
+            </p>
+
+            <h2>SciPy</h2>
+            <p>
+                offers a range of functions used for scientific computations, linear algeabraic functions, interpolation, signal processing etc. 
+            </p>
+            
+            <h2>Pandas</h2>
+            <p>
+                provides a variety of data structures for use in scientific applications 
+                <br><br>pandas data structures are high-performance, extremely efficient and fairly easy to use 
+                <br><br>also includes a range of functions for manipulating data in those data structures 
+                <br><br>pandas DataFrame is a two-dimensional, table like structure heavily used in scientific applications 
+                <br><br>pandas lets you easily read .csv files into DataFrame structes for processing in your application 
+                <br><br>pandas allows you to quickly sort, filter and manipulate the data once it is in a DataFrame 
+            </p>
+
+            <h2>Scikit-Learn</h2>
+            <p>
+                provides functions to support machine learning in Python 
+                <br><br>includes algorithms for classification, regression and clustering 
+            </p>
+
+            <h3>Classification</h3>
+            <p>
+                a machine learning technique where algorithms attempt to classify data base on certain characteristics 
+                <br><br>
+            </p>
+
+            <h3>Regression</h3>
+            <p>
+                regression algorithms are designed to analyze a series of inputs and, based on those inputs, predict the output of new values added to the system
+                <br><br>
+            </p>
+
+            <h3>Clustering</h3>
+            <p>
+                clustering is a technique where algorithms attempt to group data based on a set of input attributes
+                <br><br>through these groups, algorithms then attempt to predict outcomes based on new inputs 
+            </p>
+
+        </article>
+
+    </main>
+
+    <hr>
+
+    <footer>
+
+    </footer>
+
+    <hr>
+    
+</body>
+
+
+</html>

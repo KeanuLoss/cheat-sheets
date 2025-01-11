@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Keanus oLLama cheat sheet</h1>
+
+        <div class="references">
+        <a href="python_cheat_sheet.html">Python cheat sheet</a>
+        <br><a href="Khan_computer_science_fundamentals.html">Khan computer science cheat sheet</a>
+        <br><a href="HTML_cheat_sheet.html">HTML cheat sheet</a>
+        <br><a href="IU_PYTHON.html">IU introduction to Python</a>
+        <br><a href="IU_OOP_PYTHON.html">IU Object Oriented Programming</a>
+        </div>
+        
+        <nav>
+
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <article>
+            <h2>Ollama</h2>
+            <p>
+                With oLLama you can use open source LLM's locally. It uses the CLI (command line interface) which manages the installation and also the execution of LLM's locally.
+                <br><br>1. Running the LLM locally provides a lot of security since you don't need to send sensitive data to a data center where it get's processed.
+                <br><br>2. Not needing cloud based services also reduces high costs.
+                <br><br>3. Local execution reduces latency issues !
+                <br><br>4. Models can be customized and fine tuned !
+                <br><br>
+            </p>
+        </article>
+
+        <article>
+            <h2>Key features</h2>
+            <p>
+                1. Allows model management -> different models can be used interchangeably 
+                <br><br>2. unified interface -> variuos models can be controlled with the same interface / set of commands
+                <br><br>3. Extensibility : support for custom models if needed // different models / extensions can be added if needed
+                <br><br>4. Performance optimization 
+            </p>
+        </article>
+
+        <article>
+            <h2>Use cases</h2>
+            <p>
+                1. Development & testing -> it's easy to switch between different models in order to see which one performs the best for the needed purpose
+                <br><br>2. industries that require very secure applications (health care / finance / big companies)
+            </p>
+        </article>
+
+        <article>
+            <h2>Setup</h2>
+            <p>
+                1. Download Ollama
+                <br><br>2. select the model and copy the run command
+                <br><br>3. run the command in a terminal -> now you're inside the shell of the model of your choice
+                <br><br>" /help " is a very useful command 
+                <br><br>with " ollama list " you can see all the models you have downloaded -> you need to be oustide of the model shell for this 
+                <br><br> " ollama help " for managing models (delete, update, ...)
+                <br><br>llava is good for image processing 
+            </p>
+        </article>
+
+        <article>
+            <h2>LLM parameters</h2>
+            <p>
+                /show info : displays the parameters of the model your're running 
+                <br>the higher the number of parameters the bigger the neural network -> more precise is the output 
+                <br><br> more parameters also require more computational resources !
+                <br><br>context length : number of tokens than can be processed in a single input 
+                <br><br>embedding length : size of the vector for each token in the input text -> higher  dimensional embeddings can capture more nuanced meanings and relationships between words
+            </p>
+        </article>
+    </main>
+
+    <hr>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

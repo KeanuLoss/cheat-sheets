@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Keanu Loss">
+        <meta name="description" content="On This page you will see my progress on building my first website">
+<title> Keanus first Website</title>
+<link rel="icon" href="phoenix-framework-brands-solid.svg" type="image/x-icon">
+<link rel="stylesheet" href="css/main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1> Keanus web-development progress </h1> 
+            <p> Welcome to my first website! 
+            <br>This website is an continous project and a documentation of my web-development process.
+            </p>
+            I will  document everything I've learned with brief descriptions and code examples.
+
+        <hr>
+
+        <div class="references">
+            <a href="python_cheat_sheet.html">Python cheat sheet</a>
+            <br><a href="oLLama_cheat_sheet.html">oLLama cheat sheet</a>
+            <br><a href="Khan_computer_science_fundamentals.html">Computer science cheat sheet</a>
+            <br><a href="css_cheat_sheet.html">CSS cheat sheet</a>
+            <br><a href="IU_PYTHON.html">IU introduction to Python</a>
+            <br><a href="IU_OOP_PYTHON.html">IU Object Oriented Programming</a>
+
+        </div>
+
+            Skip to any topic:
+            <nav aria-label="primary-navigation">
+                <ul>
+                    <li>
+                    <a href="#text-basics">text basics</a>
+                    </li>
+                    <li>
+                        <a href="#adresses">adresses</a>
+                    </li>
+                    <li>  
+                        <a href="#ordered-lists">ordered lists</a>
+                    </li>
+                    <li>
+                        <a href="#unordered-lists">unordered lists</a>
+                    </li>
+                    <li>
+                        <a href="#description-lists">description lists</a>
+                    </li>
+                    <li>   
+                        <a href="#abbreviations">abbreviations</a>
+                    </li>
+                    <li>  
+                        <a href="#absolute-references">absolute references</a>
+                    </li>
+                    <li>
+                        <a href="#relative-references">relative references</a>
+                    </li>
+                    <li>
+                        <a href="#download-links">download-links</a>
+                    </li>
+                    <li>
+                        <a href="#navigation">navigation</a>
+                    </li>
+                    <li>
+                        <a href="#adding-images">adding images</a>
+                    </li>
+                    <li>
+                        <a href="#image-captions">image captions</a>
+                    </li>
+                    <li>
+                        <a href="#semantic-elements">semantic elements</a>
+                    </li>
+                    <li>
+                        <a href="#tables">tables</a>
+                    </li>
+                    <li>
+                        <a href="#table-semantics">table semantics</a>
+                    </li>
+                 
+                </ul>
+            </nav>
+        </header>
+        <hr>
+            <main>
+                <article id="text-basics">
+                    <h2>Learning about text basics </h2> 
+                    <p> This is heading size 2 </p>
+            
+                    <hr>
+            
+                    <h3> Learning about sub headings </h3> 
+                    <p> This heading size 3 is smaller than the other headings </p>
+            
+                    <hr>
+
+                    <h3> Usage of breaks </h3>
+                    <br> by using &nbsp;&lt;br&gt; you can use breaks
+                    <p> but what is the difference to just using another line like this?</p>
+                    <br> When you use "br" it creates a bigger line spacing than using another paragraph does.
+            
+                    <hr>
+
+                    <h3> Usage of &nbsp;&lt;em&gt; </h3>
+                    <p> By using &lt;em&gt; you can emphasize words to create semanthics, <em> writing them in cursive.</em></p>
+                    <img src="img/emphasize.JPG" alt="code for cursive text">
+                    <hr>
+
+                    <h3> Usage of &nbsp;&lt;strong&gt; </h3>
+                    <p> By using &lt;strong&gt; you can emphasize words <strong> by making them fat. </strong></p>
+                    <img src="img/strong.JPG" alt="code code for strong text">
+
+                    <hr>
+
+                    <h3>Usage of &lt;span&gt;</h3>
+                    <p>
+                        By using span tags you can pick specific words to style them individually.
+                    </p>
+                </article>
+
+                <hr>
+
+                <article id="adresses">
+                    <h3> Usage of &nbsp;&lt;adress&gt; </h3>
+                    <p> By using &lt;address&gt; you can add adresses like:</p>
+                    <address> 
+                                hour earth GmbH<br>
+                                Hamburg,Germany<br>
+                                Ritterstraße 105,22089
+                    </address>
+                    <img src="img/adresses.JPG" alt="code for adresses">
+                </article>
+
+                <hr>
+
+                <article id="ordered-lists">
+                    <h3> Usage of ordererd lists &nbsp;&lt;ol&gt; </h3>
+                    <p> By using ordered lists you neither need to use breaks, nor use spaces to create indents.
+                        <br> Since the lists aren't inside a paragraph, the line spacings are smaller.
+                        <br>If bigger line spacings are needed, you can put the list within a paragraph element. 
+                    </p>
+                        <strong>Notice:</strong>
+                    <ul>
+                        <li> you need to create a paragraph for every line that you want a bigger line spacing for.</li>
+                        <li>Every line has to be within an &lt;li&gt; element</li>
+                    
+                    </ul>
+                    <br> Here's an example of a daily to-do list:
+                    <ol>
+                    <li>get up</li>
+                    <li>make the bed</li>
+                    <li>drink 2 glasses of water</li>
+                    <li>brush your teeth</li>
+                    <li>do 5 sets of pushups until failure</li>
+                    <li>do 5 sets of mountain climbers</li>
+                    <li>drink a glass of water</li>
+                    <li>make breakfast</li>
+                    <li>start working</li>
+                    <li>have a 15minute break after 2 hours</li>
+                
+                    </ol>
+                    <img src="img/ordered-lists.JPG" alt="code for ordered lists">
+                </article>
+
+                <hr>
+
+                <article id="unordered-lists">
+                    <h3> Usage of unordererd lists &nbsp;&lt;ul&gt; </h3>
+                        <p>By using unordered lists you crate bullet points.
+                        <br> Here's an example of a grocerie list:
+                        </p>
+
+                    <ul>
+                        <li>blueberries</li>
+                        <li>salad</li>
+                        <li>tomatoes</li>
+                        <li>bread</li>
+                        <li>yoghurt</li>
+                        <li>pesto</li>
+                    </ul>
+                    <img src="img/unordered-lists.JPG" alt="code for unordered lists">
+                </article>
+
+                <hr>
+
+                <article id="description-lists">
+                    <h3> Usage of description lists &nbsp;&lt;dl&gt; </h3> 
+                    <p>By using description lists you create a different format of your list.</p>
+                        <ol> <li>create a desription term &lt;dt&gt;</li>
+                                <li>create a description detail &lt;dd&gt;</li>
+                        </ol>
+                    The description detail will be indented:
+
+                    <dl>
+                        <dt>carbohydrates</dt>
+                            <dd>contain 4kcal per gram</dd>
+                    
+                        <dt>proteins</dt>
+                            <dd>contain 4kcal per gram</dd>
+                    
+                        <dt>fats</dt>
+                            <dd>contain 9kcal per gram</dd>
+                    </dl>
+                    <img src="img/description-lists.JPG" alt="code for description-lists">
+                </article>
+
+                <hr>
+
+                <article id="abbreviations">
+                    <h3>Using abbreviations &lt;abbr&gt;</h3>
+                    <p>With the use of abbreviation elements you can display what it stands for when hovering over it with the mouse cursor.</p>
+                    <br>With the integration of <abbr title="large language models">LLMs</abbr> like ChatGPT or llama you can build software that can do complex tasks which wouldn't be possible without human interaction.
+                    <img src="img/abbreviations.JPG" alt="code for abbreviations">
+                </article>
+
+                    <hr>
+
+                <article id="absolute-references">
+                    <h3>absolute references </h3>     
+                    <p>By using anchor elements &lt;a&gt; you can reference a link to a word.</p>
+                    <br>If we use the abbreviation from the previous example, we can link an article about LLMs to the abbrevation.
+                    <br>The anchor element needs to be placed within the abbrevation element.
+                    <br>Since the source is not on the same server as your html file, an absolute reference (a whole URL) is needed instead of a relative reference.
+                    <p>
+                    <br>With the integration of <abbr title="large language models"><a href="https://www.e-teaching.org/materialien/glossar/llm-large-language-model" target="blank">LLMs</a></abbr> like ChatGPT or llama you can build software that can do complex tasks which wouldn't be possible without human interaction.
+                    </p>
+                    <img src="img/absolute-references.JPG" alt="code for absolute references">
+                    
+                    <h2>targets</h2>
+                        With the target="" attribute you can change how the link is opened:
+                        <dl>
+                            <dt>_blank</dt>
+                            <dd>opens link in a new tab</dd>
+
+                            <dt>blank</dt>
+                            <dd>opens link in a new tab BUT if you use multiple links with a blank target, they all open in the first new tab instead of creating a new tab for every link</dd>
+
+                            <dt>_self</dt>
+                            <dd>opens link in same tab (default)</dd>
+
+                            <dt>_parent</dt>
+                            <dd></dd>
+
+                            <dt>_top</dt>
+                            <dd></dd>
+                        </dl>
+
+                    <h2>image links</h2>
+                    <p>
+                        When you want to use an image as a link, all you have to do is use an image-element instead of text within the anchor tag.
+                    </p>
+                    <a href="surf.html" target="_blank"><img src="img/sea-4242303_640.jpg" alt="waves"></a>
+                </article>
+                   <hr>
+                <article id="relative-references">
+                    <h2>relative reference</h2>
+                    <p>When you want to create a reference to a page that's on your server, you use a relative reference.</p>
+                    <p>In order to do this you use an anchor element as well, but for the reference you use the html file in the folder where your index file is located.
+                    </p>
+                    <img src="img/relative-references.JPG" alt="code for relative references">
+                </article>
+
+                <hr>
+
+                <article id="navigation">
+                    <h2>navigation</h2>
+                        <p>
+                            By using section elements &lt;section&gt; around different sections within your website you can create a navigation.</p>
+                        
+                            <p>In order to do so you have to do these steps:</p>
+                        <ol>
+                            <li>
+                                create sections and give them id's &lt;section id="..."&gt;
+                            </li>
+                            <li>
+                                create a nagivation with &lt;nav&gt;
+                            </li>
+                            <li>
+                                create an unorganized list with list items for every section id
+                            </li>
+                        </ol>
+                        <p>
+                            If you use just an # as the reference in your anchor tag you can create a "back to top"-function
+                        </p>
+                        <img src="img/navigation.JPG" alt="code for navigation">
+                </article>
+
+                <hr>
+                <article id="download-links">
+                    <h2>download links</h2>
+                    <p>
+                        You can create download-links by creating an anchor tag &lt;a&gt; by setting the file name, which needs to be within the folder of the html file, as the reference, followed by the download attribute.
+                    </p>
+                        
+                        <dl>
+                            <dt>This is what the code looks like</dt>
+                            <dd>&lt;a href="file name"download&gt;what will be downloaded&lt;/a&gt;
+                            </dd>
+                        </dl>
+                
+                    <img src="img/download-links.JPG" alt="code for download-links" loading="lazy">
+                </article>
+                
+                <hr>
+                <article id="adding-images">
+                    <h2>adding images</h2>
+                    <p>
+                        You can add images by using image elements &lt;img&gt;.
+                        <br>For the source you need to enter the folder/file name, the "alt" displays the text, in case the file can't be loaded.
+                    </p>
+                    <img src="img/adding-images.JPG" alt="code for adding images">
+                    <p>
+                        You can adjust the width and height by adding width="..." or height="..." attribute or using a style attribute &lt;style="width:...px; height:...px;"&gt;
+                        <br>If you don't do this, the page might flicker while images load.
+                    </p>
+                        <p>
+                            <strong><br>You should make it match to the actual size of the used image, in order to avoid cummulative shift.</strong>
+                        </p>
+                        <p>
+                            By changing the loading attribute you can enhance the performance of your website by changing it from the default setting "eager" to "lazy".
+                        </p>
+                        <img src="img/loading.JPG" alt="code for loading image">
+                        <br>
+
+                        <h2>background image</h2>
+                        <p>
+                            If you want to use an image as a background, you need to use a style attribute within the body tag.
+                            <br>&lt;body style="background-image:url('file name');"&gt;
+                        </p>
+                        <p>
+                            If you want an image for a background only for a certain paragraph, all you need to do is use a style attribute within the paragraph tag.
+                        </p>
+                </article>
+
+                <hr>
+
+                <article id="adding-videos">
+                    <h2>adding videos</h2>
+                    <p>
+                        You can embed and display videos on your website by using a video element &lt;video&gt;.
+                        <br><br>In order to play the video you need to use a controls attribute.
+                        <br><br>By using the width="" attribute you can change the size.
+                        <br><br>By using a poster="" attribute you can display an image as a thumbnail for your video.
+                        <br><br>By using the attribute autoplay the video immediately starts playing.
+                        <br><br>By using iframe elements &lt;iframe&gt; you can display the content of another website within your own website.
+                        <br>If you want to show a youtube video on your website you can simply copy the iframe-code from youtubes "embed-menu".
+                    </p>
+
+                </article>
+
+                <hr>
+                <article id="image-captions">
+                        <h2>image captions</h2>
+                            If you want to add a caption to your images, you need to take two steps:
+                            <ol>
+                                <li>
+                                    create a figure tag around the image
+                                </li>
+                                <li>
+                                    create a figcaption underneath the image
+                                </li>
+                            </ol>
+                            <figure>
+                                <img src="img/caption.jpg" alt="code for image caption">
+                                <figcaption>
+                                    code for adding an image caption
+                                </figcaption>
+                            </figure>
+                            <p>
+                                You can also add a paragraph within the caption, in order to do so you have to create a figure and within that figure you add a figcaption, which contains the paragraph.
+                            </p>
+                            <img src="img/caption-paragraph.jpg" alt="code for paragraph within caption">
+                            <figure>
+                                <figcaption>Here's and example of a paragraph within a caption:</figcaption>
+                                <p>
+                                    <code>This is a paragraph, but in a caption.</code>
+                                </p>
+                            </figure>
+                </article>       
+                
+                <hr>
+
+                <article id="semantic-elements">
+                    <h2>semantic-elements</h2>
+                        <p>
+                            Semantic elements are very important to structure your website.
+                            <br>They make it easier to read & scan the HTML, improve the SEO as well as the accessability with e.g. screen readers.
+                        </p>
+                            A website consists of three parts:
+                        <dl>
+                            <dt>1. the header</dt>
+                                <dd>contains the h1 and the navigation</dd>
+                            <dt>2. the main element</dt>
+                                <dd>contains all of the sections of your website</dd>
+                            <dt>3. the footer</dt>
+                                <dd>contains navigations as well </dd>
+                        </dl>
+                        
+                    <h2>aria-label</h2>
+                        <p>
+                            When you have several navigations, you should label them so assisted technology knows which navigation is which.
+                            <br>You do so by using an aria-label &lt;aria-label&gt;="primary/secondary navigation"
+                        </p>
+                
+                    <h2>articles</h2>
+                        <p>
+                            While sections are used for more generic topics, articles are used when theres specific & independent content.
+                        </p>
+
+                    <h2>asides</h2>
+                        <p>
+                            You can use asides with detail and summary elements in order to create sections that are only indirectly correlated to the general topic. For example a sidebar/menue with different kinds of content/items.
+                            <br>
+                        </p>
+                    <h2>summary</h2>
+                        <p>
+                            The summary element displays the name of the conten, for example : my tech stack
+                        </p>
+                    <h2>details</h2>
+                        <p>
+                            The details element contains different sub-contents, for example : HTML,CSS,Javascript
+                        </p>
+                        <aside>
+                            <details>
+                                    <summary>
+                                        My tech stack
+                                    </summary>
+                                HTML
+                            </details>
+                        </aside>
+                    <h2>mark</h2>
+                        <p>
+                            Mark elements let you highlight words <mark>like a textmarker.</mark>
+                        </p>
+                    <h2>time</h2>
+                            Time elements provide meaning in the HTML that are read by assisted technologies.
+                            <br> They don't change the format of times.
+                            <p>Example:
+                                <br> I always wake up at <time datetime="06:30">6:30 am</time>.
+                            </p>
+                            <p>
+                                For time durations you need to use PT"amount of hours" for the datetime.
+                            </p>
+                                Example:
+                                <br>I work for <time datetime="PT8H">8 hours every day</time>.
+                        
+                </article>
+
+                <hr>
+
+                <article id="tables">
+                    <h2>tables</h2>
+                        
+                            By using table elements you can create tables.
+                            <br>After creating a table element &lt;table&gt; you need to create a table row &lt;tr&gt;.
+                            <br>Inside the table row you need to create a table data element &lt;td&gt;. Each data element creates a column.
+                            <br>When you create a table, you put the different contents in individual table data elements.
+                            <p>
+                                By using table header elements &lt;th&gt; you can create table headers. These need to be placed within table rows as well. They will have a stronger font.
+                            </p>
+                            <p>
+                                By using rowspan="2" within a table data you create a row that is split in two. &lt;td rowspan="2">...&lt;/td&gt;
+                            </p>
+                            <p>    
+                                Using colspan="2" within a table data you create a row that takes up the width of both columns. &lt;td colspan="2"&gt;
+                            </p>
+                        
+                        Example:
+                    <table>
+                            <caption>business hours</caption>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>open/closed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <time datetime="08:00">8am</time> - <time datetime="12:30">12:30pm</time>
+                                </td>
+                                <td>
+                                    business open
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <time datetime="12:30">12:30pm</time> - <time datetime="13:00">1pm</time>
+                                </td>
+                                <td>
+                                    business closed
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <time datetime="13:00">1pm</time> - <time datetime="17:30">5:30pm</time>
+                                </td>
+                                <td>
+                                    business open
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">outside business opening hours</td>
+                                <td>available via phone</td>
+                            </tr>
+                            <tr>
+                                <td>available via e-mail</td>
+                            </tr>
+                            
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Contact us to create a better world together</td>
+                            </tr>
+                        </tfoot>
+
+                    </table>
+                <form action="https://httpbin.org/get" method="get">
+                    <fieldset>
+                        <legend>contact us</legend>
+                        <p>
+                            <label for="firstName">first name</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="please enter your first name" autocomplete="on" required>
+                        </p>
+                        <p>
+                            <label for="lastName">last name</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="please enter your last name" autocomplete="on" required>
+                        </p>
+                        <p>
+                            <label for="email">email</label>
+                            <input type="email" name="email" id="email" placeholder="please enter your email" required>
+                        </p>
+                        <p>
+                            <label for="phone">phone:</label>
+                            <input type="tel" name="phone" id="phone" placeholder="0170 123 45 67" pattern="[0-9]{4}[0-9]{3}[0-9]{2}[0-9]{2}" required>
+                        </p>
+                        <p>
+                            <label for="phone">business / private Person:</label>
+                            <select name="business" id="business">
+                                <option value="business">business</option>
+                                <option value="privatePerson">private person</option>
+                            </select>
+                        </p>
+                        <fieldset>
+                            <legend>let us know how we can help you</legend>
+                            
+                                <textarea name="message" id="message" cols="65" rows="10" placeholder="How can we help you?"></textarea>
+                            
+                        </fieldset>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>terms of conditions</legend>
+                        <p>
+                            <input type="checkbox" name="consent" id="consent" value="consent">
+                            <label for="consent">I agree to my data being processed by hour earth GmbH for communication purposes </label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <button type="submit">Submit request</button>
+                    <button type="reset">Reset</button>
+                </form>
+                </article>
+
+                <hr>
+
+                <article id="table-semantics">
+                <h2>table semantics</h2>
+                <h3>captions</h3>
+                        <p>
+                            By using caption elements &lt;caption&gt; you can say what the table is about. If navigated with a screen reader you can decide if you want to skip the table.
+                        </p>
+                <h3>header,main & footer</h3>
+                        <p>
+                            like on your website, you can create a header, main and footer
+                        </p>
+                <h3>headings in rows</h3>
+                    <p>
+                        If you want to create headings for individual rows, you do so by creating a column with a table head element &lt;th&gt;.
+                        <br>By using table headings you can use scopes to optimize semantics.
+                        <br>If the heading is for a row you need to use a scope="row", for a column you need to use scope="col".
+                        <br>&lt;th scope="row/col"&gt;
+                    </p>
+                </article>
+
+                <hr>
+
+                <article id="forms">
+                    <h2>forms</h2>
+                    <h3>form elements</h3>
+                
+                        By using form elements you are able to create forms.
+                        <br>You need to define two attributes:
+                        <dl>
+                            <dt>1. action</dt>
+                            <dd>where the form-data will be send to</dd>
+
+                            <dt>2. method</dt>
+                            <dd>specifies how the form-data is send</dd>
+                            <dd>get: form-data in URL -> <strong>never us for sensitive data!</strong></dd>
+                            <dd>post: form-data inside the body of HTTP request(not shown in URL)</dd>
+                        </dl>
+                    <h3>form label</h3>
+                        The content of forms are usually inputs, these need to be labeled first. The for attribute value needs to match the id of the input.
+                    <h3>form input</h3>
+                        For the form input several attributes need to be defined:
+                        <dl>
+                            <dt>1. type</dt>
+                            <dd>depends on what information is to be entered</dd>
+
+                            <dt>2. name</dt>
+                            <dd>how the information is identified at the server</dd>
+
+                            <dt>3. id</dt>
+                            <dd>needs to match the attribute value of the label</dd>
+
+                            <dt>4. placeholder</dt>
+                            <dd>displays a placeholder until information is put in</dd>
+
+                            <dt>5. autocomplete</dt>
+                            <dd>shows previously input information if turned on</dd>
+
+                            <dt>6. required</dt>
+                            <dd>makes an input required in order to send the form</dd>
+
+                            <dt>7. autofocus</dt>
+                            <dd>focuses the cursor into the field when the website is loaded </dd>
+                        </dl>
+                    <h3>dropdown option</h3>
+                        If you want to create a dropdown option where you can choose from different options you need to use a select element &lt;select&gt;
+                        <br>Within that element you need to create option elements.
+                        <p>
+                            You can organize dropdown lists by using optgroup elements &lt;optgroup&gt;.
+                            <br>This way you can label different groups.
+                        </p>
+                    <h3>fieldsets</h3>
+                        By using fieldsets you create a box around your forms.
+                        <br>You can add a description by using a legend element.
+                    
+                </article>
+            </main>
+
+                <hr>
+        <footer>    
+                <p>
+                    &copy; <a href="about.html">Keanu Loss</a>
+                </p>
+                <p>
+                    <a href="#">go back to top</a>
+                </p>
+        </footer>
+    </body>
+</html>
